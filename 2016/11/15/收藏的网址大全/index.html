@@ -71,7 +71,7 @@
 	            <a href="#s1">归档</a>
 	                    <ul class="submenu">
 	                        <li>
-	                        <a class="archive-link" href="/archives/2018/01/">January 2018</a>
+	                        <a class="archive-link" href="/archives/2018/01/">January 2018</a></li><li><a class="archive-link" href="/archives/2016/11/">November 2016</a></li><li><a class="archive-link" href="/archives/2016/10/">October 2016</a>
 	                    </ul>
 	        </li>
 	        
@@ -105,72 +105,12 @@
 </nav>
 
         <div id="main" >
-            <div class ="post_page_title_img" style="height: 25rem;background-image: url(http://static.open-open.com/lib/uploadImg/20150620/20150620203424_361.png);background-position: center; background-repeat:no-repeat; background-size:cover;-moz-background-size:cover;overflow:hidden;" >
-                <a href="#" style="padding: 4rem 4rem 2rem 4rem ;"><h2 >搭建博客</h2></a>
+            <div class ="post_page_title_img" style="height: 25rem;background-image: url(https://timgsa.baidu.com/timg?image&amp;quality=80&amp;size=b9999_10000&amp;sec=1517068932890&amp;di=8eb60566435eff88571e01bcf92ad67c&amp;imgtype=0&amp;src=http%3A%2F%2Fpic.58pic.com%2F58pic%2F15%2F34%2F43%2F30C58PIC9tb_1024.jpg);background-position: center; background-repeat:no-repeat; background-size:cover;-moz-background-size:cover;overflow:hidden;" >
+                <a href="#" style="padding: 4rem 4rem 2rem 4rem ;"><h2 >收藏好的网址</h2></a>
             </div>
             <!-- Post -->
             <div class="typo" style="padding: 3rem;">
-                <h1 id="从零教你搭建博客"><a href="#从零教你搭建博客" class="headerlink" title="从零教你搭建博客"></a>从零教你搭建博客</h1><h2 id="安装git"><a href="#安装git" class="headerlink" title="安装git"></a>安装git</h2><p>1、Windows下就直接下载git客户端一直下一步  </p>
-<p>2、Ubuntu就直接一条命令  </p>
-<pre><code>sudo apt-get install git  
-</code></pre><p>3、安装完成之后在命令行中输入git version回车，能显示git版本信息就算安装成功，接下来所有步骤都在git bash中进行了。</p>
-<h2 id="安装node-js"><a href="#安装node-js" class="headerlink" title="安装node.js"></a>安装node.js</h2><p>1、Windows依然是下载好node.js后一直下一步，最后要注意勾选上add to path添加到环境变量  </p>
-<p>2、Ubuntu就直接输入两条命令  </p>
-<pre><code>sudo apt-get install nodejs-legacy nodejs  
-sudo apt-get install npm
-</code></pre><p>3、安装完毕输入node -v如果能得到版本信息就算安装成功  </p>
-<h2 id="安装Hexo"><a href="#安装Hexo" class="headerlink" title="安装Hexo"></a>安装Hexo</h2><p>1、先创建一个文件夹用来存储我们的博客，就叫hexo文件夹吧<br>2、在git bash中cd到hexo路径下执行命令  </p>
-<pre><code>npm i -g hexo
-</code></pre><p>3、完毕后执行  </p>
-<pre><code>hexo -v
-</code></pre><p>4、如果得到版本信息代表安装成功<br>5、然后初始化博客，执行</p>
-<pre><code>hexo init
-</code></pre><h2 id="在github中创建博客"><a href="#在github中创建博客" class="headerlink" title="在github中创建博客"></a>在github中创建博客</h2><p>1、打开自己的github，创建一个空项目，项目名叫 yzytmac.github.io  </p>
-<ul>
-<li>注意，因为我的 github 是 www.github.com/yzytmac, 所以是这样起名字，你自己要吧yzytmac换成你自己的名字，”.github.io”是固定格式，不能变  </li>
-</ul>
-<p>2、关联git和github<br>第一次使用git向github提交，需要先配置用户信息，执行命令 </p>
-<pre><code>git config --global user.name &quot;你的github名字&quot;
-git config --global usr.email &quot;你的github绑定邮箱&quot;
-</code></pre><p>3、创建ssh  </p>
-<pre><code>ssh-keygen -t rsa -C 你的邮箱
-</code></pre><p>然后会让你指定生成id_rsa存放的位置，随你选，就选择它提示的位置就行  </p>
-<p>4、github中添加生成的ssh<br>github中-&gt; 头像 -&gt; settings -&gt; SSH and GpG key -&gt; New SSH key<br>然后用记事本打开刚才生成的id_rsa.pub，复制里面的内容，粘贴到github中来，title随便起  </p>
-<p>5、一切都完成后在git 中执行  </p>
-<pre><code>ssh -T git@github.com
-</code></pre><p>如果提示成功，就代表ssh配置好了  </p>
-<h2 id="部署博客"><a href="#部署博客" class="headerlink" title="部署博客"></a>部署博客</h2><p>1、在hexo中打开_config.yml,在里面配置好自己的github位置  </p>
-<pre><code>deploy:
-    type: git
-    repo: https://github.com/YourgithubName/YourgithubName.github.io.git
-    branch: master
-</code></pre><p>2、在git中执行  </p>
-<pre><code>hexo clean
-hexo generate
-hexo server
-</code></pre><p>如果报错就执行  </p>
-<pre><code>npm i hexo-server  
-</code></pre><p>然后再重复一下上面三条命令  </p>
-<p>3、如果成功，最下面会有提示 <a href="http://localhost:4000，" target="_blank" rel="noopener">http://localhost:4000，</a> 在浏览器中打开它，就可以看到自己的博客了<br>4、上传到github中,执行  </p>
-<pre><code>hexo d
-</code></pre><p>就将项目上传到github中了，此时你就可以通过yzytmac.github.io这个网址访问你的博客了，当然yzytmac换成你自己的名字  </p>
-<h2 id="写博客"><a href="#写博客" class="headerlink" title="写博客"></a>写博客</h2><p>1、在hexo/source/_posts中创建一个后缀为md的文件，文件名就是文章名<br>2、在文章的最上面写上  </p>
-<pre><code>---
-title: 文章标题
-date: 2018-01-26 14:23:50
-tags: 标签
-categories: 分类
-thumbnail: 缩略图
----
-</code></pre><p>然后就开始写正文了。<br>3、写完之后执行  </p>
-<pre><code>hexo clean
-hexo generate
-hexo server
-</code></pre><p>就可以在yzytmac.github.io看到你自己的新文章了。<br>最后再推荐一篇文章写的挺好的<a href="http://visugar.com/2017/05/04/20170504SetUpHexoBlog/" target="_blank" rel="noopener">博客搭建</a></p>
-<h2 id="联系我："><a href="#联系我：" class="headerlink" title="联系我："></a>联系我：</h2><p>邮箱：yzytmac@163.com<br>微信：<br><img src="https://gitee.com/yzytmac/resource/raw/master/yzyweixin.png" alt="" title="微信二维码">  </p>
-<ul>
-<li>觉得有用可以打赏我一下，多少不限，全看您的心意。<br><img src="https://gitee.com/yzytmac/resource/raw/master/alipay.png" alt="" title="支付宝二维码"><img src="https://gitee.com/yzytmac/resource/raw/master/weixinpay.png" alt="" title="微信二维码"></li>
-</ul>
+                <p>所有的网址都在我的github——&gt;<a href="https://github.com/yzytmac/YzyCollects" target="_blank" rel="noopener">点击进入网址收藏</a></p>
 
             </div>
 
@@ -233,8 +173,8 @@ $('.btn_click_load').click(function() {
 -->
 <script type="text/javascript">
     var disqus_config = function () {
-        this.page.url = 'http://yoursite.com/2018/01/26/搭建博客/';  // Replace PAGE_URL with your page's canonical URL variable
-        this.page.identifier = 'http://yoursite.com/2018/01/26/搭建博客/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+        this.page.url = 'http://yoursite.com/2016/11/15/收藏的网址大全/';  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = 'http://yoursite.com/2016/11/15/收藏的网址大全/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
     };
 </script>
 
