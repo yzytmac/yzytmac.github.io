@@ -1,1 +1,1 @@
-#点击进入---> [我的博客](https://yzytmac.github.io)
+# [我的博客](https://yzytmac.github.io)
