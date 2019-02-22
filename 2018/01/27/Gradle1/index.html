@@ -61,7 +61,7 @@
 	            <a href="#s1">分类</a>
 	                    <ul class="submenu">
 	                        <li>
-	                        <a class="category-link" href="/categories/Gradle教程/">Gradle教程</a></li><li><a class="category-link" href="/categories/生活/">生活</a></li><li><a class="category-link" href="/categories/电脑技术/">电脑技术</a>
+	                        <a class="category-link" href="/categories/CMAKE总结/">CMAKE总结</a></li><li><a class="category-link" href="/categories/Gradle教程/">Gradle教程</a></li><li><a class="category-link" href="/categories/Java教程/">Java教程</a></li><li><a class="category-link" href="/categories/Kotlin教程/">Kotlin教程</a></li><li><a class="category-link" href="/categories/生活/">生活</a></li><li><a class="category-link" href="/categories/电脑技术/">电脑技术</a>
 	                    </ul>
 	        </li>
 	        
@@ -71,7 +71,7 @@
 	            <a href="#s1">归档</a>
 	                    <ul class="submenu">
 	                        <li>
-	                        <a class="archive-link" href="/archives/2018/01/">January 2018</a></li><li><a class="archive-link" href="/archives/2016/11/">November 2016</a></li><li><a class="archive-link" href="/archives/2016/10/">October 2016</a>
+	                        <a class="archive-link" href="/archives/2019/02/">February 2019</a></li><li><a class="archive-link" href="/archives/2018/01/">January 2018</a></li><li><a class="archive-link" href="/archives/2016/11/">November 2016</a></li><li><a class="archive-link" href="/archives/2016/10/">October 2016</a>
 	                    </ul>
 	        </li>
 	        
@@ -110,41 +110,47 @@
             </div>
             <!-- Post -->
             <div class="typo" style="padding: 3rem;">
-                <h3 id="Gradle是构建工具，是用groovy语言写的。"><a href="#Gradle是构建工具，是用groovy语言写的。" class="headerlink" title="Gradle是构建工具，是用groovy语言写的。"></a>Gradle是构建工具，是用groovy语言写的。</h3><p>1、环境搭建  </p>
+                <h3 id="groovy是构建工具，是用groovy语言写的。"><a href="#groovy是构建工具，是用groovy语言写的。" class="headerlink" title="groovy是构建工具，是用groovy语言写的。"></a>groovy是构建工具，是用groovy语言写的。</h3><p>1、环境搭建  </p>
 <p>下载gradle，将bin目录配置到环境变量中，gradle -v出现版本信息就说明配置成功<br>2、hello gradle  </p>
 <p>任意文件夹下新建build.gradle文件，然后写上第一个task  </p>
-<pre><code>task hello &lt;&lt; {
-    println &quot;hello gradle&quot;
-}
-</code></pre><p>然后在build.gradle目录下执行gradle hello，命令行中就会打印出hell gradle<br>这里“&lt;&lt;”表示向任务hello中加入一段执行代码，就是groovy代码。Gradle给我们提供了一整套DSL语言，所以看起来脱离了groovy语法，其实内部还是groovy实现的，这点不要搞错了。<br>“&lt;&lt;”是一种快捷方式，代表的语句是doLast，如：  </p>
-<pre><code>task hello  {
-    doLast{
-        println &quot;hello gradle&quot;
-    }
-}
-</code></pre><p>甚至最简单的  </p>
-<pre><code>task hello{ println &quot;hello gradle&quot;}
-</code></pre><p>3、task类型  </p>
+<pre class="line-numbers language-groovy"><code class="language-groovy">task hello <span class="token operator">&lt;&lt;</span> <span class="token punctuation">{</span>
+    println <span class="token string">"hello gradle"</span>
+<span class="token punctuation">}</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<p>然后在build.gradle目录下执行gradle hello，命令行中就会打印出hell gradle<br>这里“&lt;&lt;”表示向任务hello中加入一段执行代码，就是groovy代码。groovy给我们提供了一整套DSL语言，所以看起来脱离了groovy语法，其实内部还是groovy实现的，这点不要搞错了。<br>“&lt;&lt;”是一种快捷方式，代表的语句是doLast，如：  </p>
+<pre class="line-numbers language-groovy"><code class="language-groovy">task hello  <span class="token punctuation">{</span>
+    doLast<span class="token punctuation">{</span>
+        println <span class="token string">"hello gradle"</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>甚至最简单的  </p>
+<pre class="line-numbers language-groovy"><code class="language-groovy">task hello<span class="token punctuation">{</span> println <span class="token string">"hello gradle"</span><span class="token punctuation">}</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>3、task类型  </p>
 <p>像上面的task就是gradle中的一个默认类型DefaultTask的对象，我们可以声明其他的类型，甚至自定义类型。如用Copy类型：  </p>
-<pre><code>task cofyFile(type: Copy){
-    from: &#39;fileA&#39;
-    to: &#39;fileB&#39;
-}
-</code></pre><p>声明一个类型为Copy的task，作用就是把文件(夹)A中的内容拷贝到B  </p>
+<pre class="line-numbers language-groovy"><code class="language-groovy">task <span class="token function">cofyFile</span><span class="token punctuation">(</span>type<span class="token punctuation">:</span> Copy<span class="token punctuation">)</span><span class="token punctuation">{</span>
+    from<span class="token punctuation">:</span> <span class="token string">'fileA'</span>
+    to<span class="token punctuation">:</span> <span class="token string">'fileB'</span>
+<span class="token punctuation">}</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+<p>声明一个类型为Copy的task，作用就是把文件(夹)A中的内容拷贝到B  </p>
 <p>4、task之间的依赖  </p>
 <p>task之间也是可以依赖的  </p>
-<pre><code>task taskA{
-    println &quot;wo shi A&quot;
-}
-task taskB(dependsOn: A){
-    println &quot;wo shi B&quot;
-}
-</code></pre><p>比如执行gradle taskB，因为B依赖A，所以会先执行A，再执行B<br>还可以直接声明谁依赖谁：  </p>
-<pre><code>task C{xxx}
-C.dependsOn A
-</code></pre><p>而不用在创建task的时候声明  </p>
+<pre class="line-numbers language-groovy"><code class="language-groovy">task taskA<span class="token punctuation">{</span>
+    println <span class="token string">"wo shi A"</span>
+<span class="token punctuation">}</span>
+task <span class="token function">taskB</span><span class="token punctuation">(</span>dependsOn<span class="token punctuation">:</span> A<span class="token punctuation">)</span><span class="token punctuation">{</span>
+    println <span class="token string">"wo shi B"</span>
+<span class="token punctuation">}</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>比如执行gradle taskB，因为B依赖A，所以会先执行A，再执行B<br>还可以直接声明谁依赖谁：  </p>
+<pre class="line-numbers language-groovy"><code class="language-groovy">task C<span class="token punctuation">{</span>xxx<span class="token punctuation">}</span>
+C<span class="token operator">.</span>dependsOn A
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<p>而不用在创建task的时候声明  </p>
 <p>5、自带的task  </p>
-<p>gradle默认自带几个常用task供我们使用。如：tasks、properties、help、projects等<br>当执行gradle tasks时：会列出当前build.gradle中所有的task，当然就包含我们前面的helloGradle、taskA、taskB以及系统自带的这些个默认的task。dependencies用于显示Project的依赖信息，projects用于显示所有Project，包括根Project和子Project，properties则用于显示一个Project所包含的所有Property。这里就不一一试了。</p>
+<p>gradle默认自带几个常用task供我们使用。如：tasks、properties、help、projects等<br>当执行gradle tasks时：会列出当前build.gradle中所有的task，当然就包含我们前面的hellogroovy、taskA、taskB以及系统自带的这些个默认的task。dependencies用于显示Project的依赖信息，projects用于显示所有Project，包括根Project和子Project，properties则用于显示一个Project所包含的所有Property。这里就不一一试了。</p>
 
             </div>
 
@@ -241,7 +247,7 @@ $('.btn_click_load').click(function() {
                 <li>Design: <a href="http://miccall.tech " style="border-bottom: none;">miccall</a></li>
             </ul>
             
-            	<span id="busuanzi_container_site_pv">2018总访问量<span id="busuanzi_value_site_pv"></span>次</span>
+            	<span id="busuanzi_container_site_pv">2019总访问量<span id="busuanzi_value_site_pv"></span>次</span>
 			
         </div>
     </div>

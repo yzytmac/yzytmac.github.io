@@ -1,0 +1,289 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<link rel="bookmark"  type="image/x-icon"  href="/img/logo_miccall.png"/>
+	 <link rel="shortcut icon" href="/img/logo_miccall.png">
+	
+			
+    <title>
+    Hexo
+    </title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="/css/mic_main.css" />
+    <link rel="stylesheet" href="/css/dropdownMenu.css" />
+    
+    	<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+	
+    <noscript>
+        <link rel="stylesheet" href="/css/noscript.css" />
+    </noscript>
+
+			    <script src="/js/jquery.min.js"></script>
+    <script src="/js/jquery.scrollex.min.js"></script>
+    <script src="/js/jquery.scrolly.min.js"></script>
+    <script src="/js/skel.min.js"></script>
+    <script src="/js/util.js"></script>
+    <script src="/js/main.js"></script>
+	
+<link rel="stylesheet" href="/css/prism.css" type="text/css">
+<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
+    
+		
+<!-- Layouts -->
+
+
+
+<!--  代码渲染  -->
+<link rel="stylesheet" href="/css/prism_coy.css" />
+<link rel="stylesheet" href="/css/typo.css" />
+<!-- 文章页 -->
+<body class="is-loading">
+    <!-- Wrapper 外包 s-->
+    <div id="wrapper" class="fade-in">
+        <!-- Intro 头部显示 s -->
+        <!-- Intro 头部显示 e -->
+        <!-- Header 头部logo start -->
+        <header id="header">
+    <a href="/" class="logo">yzytmac</a>
+</header>
+        <!-- Nav 导航条 start -->
+        <nav id="nav" class="special" >
+            <ul class="menu links" >
+			<!-- Homepage  主页  --> 
+			<li >
+	            <a href="/" rel="nofollow">主页</a>
+	        </li>
+			<!-- categories_name  分类   --> 
+	        
+	        <li class="active">
+	            <a href="#s1">分类</a>
+	                    <ul class="submenu">
+	                        <li>
+	                        <a class="category-link" href="/categories/CMAKE总结/">CMAKE总结</a></li><li><a class="category-link" href="/categories/Gradle教程/">Gradle教程</a></li><li><a class="category-link" href="/categories/Java教程/">Java教程</a></li><li><a class="category-link" href="/categories/Kotlin教程/">Kotlin教程</a></li><li><a class="category-link" href="/categories/生活/">生活</a></li><li><a class="category-link" href="/categories/电脑技术/">电脑技术</a>
+	                    </ul>
+	        </li>
+	        
+	        <!-- archives  归档   --> 
+	        
+	        <li class="active">
+	            <a href="#s1">归档</a>
+	                    <ul class="submenu">
+	                        <li>
+	                        <a class="archive-link" href="/archives/2019/02/">February 2019</a></li><li><a class="archive-link" href="/archives/2018/01/">January 2018</a></li><li><a class="archive-link" href="/archives/2016/11/">November 2016</a></li><li><a class="archive-link" href="/archives/2016/10/">October 2016</a>
+	                    </ul>
+	        </li>
+	        
+	        
+		        <!-- Pages 自定义   -->
+		        
+		        <li>
+		            <a href="/about/" title="简历">
+		                简历
+		            </a>
+		        </li>
+		        
+		        <li>
+		            <a href="http://www.jimicloud.com/" title="团队">
+		                团队
+		            </a>
+		        </li>
+		        
+
+
+            </ul>
+            <!-- icons 图标   -->
+			<ul class="icons">
+		            
+		                <li><a href="https://github.com/yzytmac" class="icon fa-github"><span class="label">GitHub</span></a></li>
+		            
+		            
+		            
+		            
+			</ul>
+</nav>
+
+        <div id="main" >
+            <div class ="post_page_title_img" style="height: 25rem;background-image: url(https://timgsa.baidu.com/timg?image&amp;quality=80&amp;size=b9999_10000&amp;sec=1517576446704&amp;di=fec11781d6709c0abfdc441d3d8f06bb&amp;imgtype=0&amp;src=http%3A%2F%2F5b0988e595225.cdn.sohucs.com%2Fimages%2F20170731%2F10bfc5ca926b46c4ab04734be177ebc6.jpeg);background-position: center; background-repeat:no-repeat; background-size:cover;-moz-background-size:cover;overflow:hidden;" >
+                <a href="#" style="padding: 4rem 4rem 2rem 4rem ;"><h2 >Java教程1---Java8特性1</h2></a>
+            </div>
+            <!-- Post -->
+            <div class="typo" style="padding: 3rem;">
+                <h3 id="虽然Java9都出来很久了，但是企业用的最多的基本还是Java7，所以Java8还是有必要了解的。"><a href="#虽然Java9都出来很久了，但是企业用的最多的基本还是Java7，所以Java8还是有必要了解的。" class="headerlink" title="虽然Java9都出来很久了，但是企业用的最多的基本还是Java7，所以Java8还是有必要了解的。"></a>虽然Java9都出来很久了，但是企业用的最多的基本还是Java7，所以Java8还是有必要了解的。</h3><p>RXJava是个非常火的框架，但我刚开始学的时候对他的链式表达式不是很了解，尤其是 <strong>map、filter</strong>等操作符特别不理解，因为 <strong>map</strong>关键字在Java中是一个集合，是键值对呀，因为当时还没学过Java8和kotlin，所以很难理解，现在Java8中就有这样的表达式，所以先从Java8学起，学完之后再去看RXJava就会觉得so easy。</p>
+<h2 id="Java8新特性1—StreamApi"><a href="#Java8新特性1—StreamApi" class="headerlink" title="Java8新特性1—StreamApi"></a>Java8新特性1—StreamApi</h2><p>操作步骤（必须有创建和终止两步，没有终止的话中间操作是不会执行的）<br>一、创建 Stream<br>用一个数据源（如： 集合、数组）来创建获取一个流，有四种创建方式</p>
+<ol>
+<li><p>集合提供了两个方法  stream() 与 parallelStream()</p>
+<pre class="line-numbers language-java"><code class="language-java">List<span class="token operator">&lt;</span>String<span class="token operator">></span> list <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">ArrayList</span><span class="token operator">&lt;</span><span class="token operator">></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+Stream<span class="token operator">&lt;</span>String<span class="token operator">></span> stream <span class="token operator">=</span> list<span class="token punctuation">.</span><span class="token function">stream</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//获取一个顺序流、串行流</span>
+Stream<span class="token operator">&lt;</span>String<span class="token operator">></span> parallelStream <span class="token operator">=</span> list<span class="token punctuation">.</span><span class="token function">parallelStream</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//获取一个并行流</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+</li>
+<li><p>通过 Arrays 中的 静态方法stream() 获取一个数组流</p>
+<pre class="line-numbers language-java"><code class="language-java">Integer<span class="token punctuation">[</span><span class="token punctuation">]</span> nums <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Integer</span><span class="token punctuation">[</span><span class="token number">10</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+Stream<span class="token operator">&lt;</span>Integer<span class="token operator">></span> stream1 <span class="token operator">=</span> Arrays<span class="token punctuation">.</span><span class="token function">stream</span><span class="token punctuation">(</span>nums<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+</li>
+<li>通过 Stream 类中静态方法 of()<pre class="line-numbers language-java"><code class="language-java">Stream<span class="token operator">&lt;</span>Integer<span class="token operator">></span> stream2 <span class="token operator">=</span> Stream<span class="token punctuation">.</span><span class="token function">of</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">,</span><span class="token number">4</span><span class="token punctuation">,</span><span class="token number">5</span><span class="token punctuation">,</span><span class="token number">6</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+</li>
+<li>用函数创建无限流<pre class="line-numbers language-java"><code class="language-java"><span class="token comment" spellcheck="true">//迭代</span>
+Stream<span class="token operator">&lt;</span>Integer<span class="token operator">></span> stream3 <span class="token operator">=</span> Stream<span class="token punctuation">.</span><span class="token function">iterate</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token punctuation">(</span>x<span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">></span> x <span class="token operator">+</span> <span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">li</span><span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+stream3<span class="token punctuation">.</span><span class="token function">forEach</span><span class="token punctuation">(</span>System<span class="token punctuation">.</span>out<span class="token operator">:</span><span class="token operator">:</span>println<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment" spellcheck="true">//生成</span>
+Stream<span class="token operator">&lt;</span>Double<span class="token operator">></span> stream4 <span class="token operator">=</span> Stream<span class="token punctuation">.</span><span class="token function">generate</span><span class="token punctuation">(</span>Math<span class="token operator">:</span><span class="token operator">:</span>random<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">limit</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+stream4<span class="token punctuation">.</span><span class="token function">forEach</span><span class="token punctuation">(</span>System<span class="token punctuation">.</span>out<span class="token operator">:</span><span class="token operator">:</span>println<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+二、中间操作<br>一个中间操作链，对数据源的数据进行处理。中间操作这些都属于链式操作，返回的还是stream对象。</li>
+<li>筛选与切片<pre class="line-numbers language-java"><code class="language-java"> <span class="token function">filter</span><span class="token punctuation">(</span>p<span class="token punctuation">)</span>——接收 Lambda ， 从流中排除某些元素。
+ <span class="token function">limit</span><span class="token punctuation">(</span>n<span class="token punctuation">)</span>——截断流，获取前n个
+ <span class="token function">skip</span><span class="token punctuation">(</span>n<span class="token punctuation">)</span> ——跳过元素，返回一个扔掉了前 n 个元素的流。若流中元素不足 n 个，则返回一个空流。与 <span class="token function">limit</span><span class="token punctuation">(</span>n<span class="token punctuation">)</span> 互补
+ distinct——筛选，通过流所生成元素的 <span class="token function">hashCode</span><span class="token punctuation">(</span><span class="token punctuation">)</span> 和 <span class="token function">equals</span><span class="token punctuation">(</span><span class="token punctuation">)</span> 去除重复元素
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+</li>
+<li>映射（转换）尤其要注意参数的类型和返回值类型。具体的转换规则就由函数实现。<pre class="line-numbers language-java"><code class="language-java"><span class="token function">map</span><span class="token punctuation">(</span>Function<span class="token operator">&lt;</span><span class="token operator">?</span> <span class="token keyword">super</span> T<span class="token punctuation">,</span> <span class="token operator">?</span> <span class="token keyword">extends</span> <span class="token class-name">R</span><span class="token operator">></span> mapper<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//接收一个函数（或lambda表达式）作为参数，该函数会被应用到每个元素上，并将其映射成一个新的元素。</span>
+<span class="token function">flatMap</span><span class="token punctuation">(</span>Function<span class="token operator">&lt;</span><span class="token operator">?</span> <span class="token keyword">super</span> T<span class="token punctuation">,</span> <span class="token operator">?</span> <span class="token keyword">extends</span> <span class="token class-name">Stream</span><span class="token operator">&lt;</span><span class="token operator">?</span> <span class="token keyword">extends</span> <span class="token class-name">R</span><span class="token operator">>></span> mapper<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//功能就是降维。三维集合降成二维集合，二维降成一维。</span>
+<span class="token comment" spellcheck="true">//如：</span>
+ArrayList<span class="token operator">&lt;</span>ArrayList<span class="token operator">&lt;</span>String<span class="token operator">>></span> list <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">ArrayList</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//list是一个二维集合</span>
+list<span class="token punctuation">.</span><span class="token function">stream</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">flatMap</span><span class="token punctuation">(</span>list2<span class="token operator">-</span><span class="token operator">></span>list2<span class="token punctuation">.</span><span class="token function">stream</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">forEach</span><span class="token punctuation">(</span>System<span class="token punctuation">.</span>out<span class="token operator">:</span><span class="token operator">:</span>print<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//经过flatMap后会得到一个一维集合list2.</span>
+<span class="token function">mapToInt</span><span class="token punctuation">(</span>ToIntFunction<span class="token operator">&lt;</span><span class="token operator">?</span> <span class="token keyword">super</span> T<span class="token operator">></span> mapper<span class="token punctuation">)</span>
+<span class="token function">mapToLong</span><span class="token punctuation">(</span>ToLongFunction<span class="token operator">&lt;</span><span class="token operator">?</span> <span class="token keyword">super</span> T<span class="token operator">></span> mapper<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">mapToDouble</span><span class="token punctuation">(</span>ToDoubleFunction<span class="token operator">&lt;</span><span class="token operator">?</span> <span class="token keyword">super</span> T<span class="token operator">></span> mapper<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+</li>
+<li>排序<pre class="line-numbers language-java"><code class="language-java"><span class="token function">sorted</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//自然顺序排，字典顺序</span>
+<span class="token function">sorted</span><span class="token punctuation">(</span>Comparator comp<span class="token punctuation">)</span><span class="token comment" spellcheck="true">//按比较器的规则排</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+</li>
+<li>并行流、串行流<pre class="line-numbers language-java"><code class="language-java"><span class="token function">parallel</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token comment" spellcheck="true">//并行流，相当于多线程执行，效率非常高。底层采用的是fork-join模式。fork-join就是采用了窃取任务的多线程</span>
+<span class="token function">sequential</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token comment" spellcheck="true">//串行流</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+三、终止操作(终端操作)<br>一个终止操作，执行中间操作链，并产生结果<pre class="line-numbers language-java"><code class="language-java">forEach<span class="token comment" spellcheck="true">//遍历</span>
+allMatch<span class="token comment" spellcheck="true">//检查是否匹配所有元素</span>
+anyMatch<span class="token comment" spellcheck="true">//检查是否至少匹配一个元素</span>
+noneMatch<span class="token comment" spellcheck="true">//检查是否没有匹配的元素</span>
+findFirst<span class="token comment" spellcheck="true">//返回第一个元素</span>
+findAny<span class="token comment" spellcheck="true">//返回当前流中的任意元素</span>
+count<span class="token comment" spellcheck="true">//返回流中元素的总个数</span>
+max<span class="token comment" spellcheck="true">//返回流中最大值</span>
+min<span class="token comment" spellcheck="true">//返回流中最小值</span>
+reduce<span class="token comment" spellcheck="true">//归约。可以将流中元素反复结合起来，得到一个值。可以结合从1加到100</span>
+collect<span class="token comment" spellcheck="true">//收集。将流中的某个数据收集起来，再返回一个集合或Optional。参数是Collector接口的实现，用于给Stream中元素做汇总的方法，通常用 Collectors 工具类创建。</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+</li>
+</ol>
+<ul>
+<li>总结<br>StreamApi就三个步骤：<ol>
+<li>根据数组或集合创建流</li>
+<li>对流进行中间操作</li>
+<li>对流进行终止操作  </li>
+</ol>
+</li>
+</ul>
+<p>其实RXJava也就是这样做的。后面会写一篇博客来讲RXJava。</p>
+
+            </div>
+
+            <!-- Post Comments -->
+            
+    <!-- 使用 DISQUS_CLICK -->
+<div id="disqus-comment">
+    <div id="disqus_thread"></div>
+
+<!-- add animation -->
+<style>
+	.disqus_click_btn {
+            line-height: 30px;
+            margin: 0;
+            min-width: 50px;
+            padding: 0 14px;
+            display: inline-block;
+            font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+            font-size: 14px;
+            font-weight: 400;
+            text-transform: uppercase;
+            letter-spacing: 0;
+            overflow: hidden;
+            will-change: box-shadow;
+            transition: box-shadow .2s cubic-bezier(.4, 0, 1, 1), background-color .2s cubic-bezier(.4, 0, .2, 1), color .2s cubic-bezier(.4, 0, .2, 1);
+            outline: 0;
+            cursor: pointer;
+            text-decoration: none;
+            text-align: center;
+            vertical-align: middle;
+            border: 0;
+            background: rgba(158, 158, 158, .2);
+            box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14), 0 3px 1px -2px rgba(0, 0, 0, .2), 0 1px 5px 0 rgba(0, 0, 0, .12);
+            color: #fff;
+            background-color: #7EC0EE;
+            text-shadow: 0
+        }
+</style>
+	
+<div class="btn_click_load" id="disqus_bt"> 
+    <button class="disqus_click_btn">点击查看评论</button>
+</div>
+
+<!--
+<script type="text/javascript">
+$('.btn_click_load').click(function() {
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'http-miccall-tech'; // required: replace example with your forum shortname
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+
+    document.getElementById('disqus_bt').style.display = "none";
+});
+</script>
+-->
+<script type="text/javascript">
+    var disqus_config = function () {
+        this.page.url = 'http://yoursite.com/2018/01/28/Java1/';  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = 'http://yoursite.com/2018/01/28/Java1/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+</script>
+
+<script type="text/javascript">
+    $('.btn_click_load').click(function() {  //click to load comments
+        (function() { // DON'T EDIT BELOW THIS LINE
+            var d = document;
+            var s = d.createElement('script');
+            s.src = '//http-miccall-tech.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', + new Date());
+            (d.head || d.body).appendChild(s);
+        })();
+        $('.btn_click_load').css('display','none');
+    });
+</script>
+</div>
+<style>
+    #disqus-comment{
+        background-color: #eee;
+        padding: 2pc;
+    }
+</style>
+
+
+        </div>
+        <!-- Copyright 版权 start -->
+                <div id="copyright">
+            <ul>
+                <li>&copy;Powered By <a href="https://hexo.io/zh-cn/" style="border-bottom: none;">hexo</a></li>
+                <li>Design: <a href="http://miccall.tech " style="border-bottom: none;">miccall</a></li>
+            </ul>
+            
+            	<span id="busuanzi_container_site_pv">2019总访问量<span id="busuanzi_value_site_pv"></span>次</span>
+			
+        </div>
+    </div>
+</body>
+
+
+
+ 	
+</html>

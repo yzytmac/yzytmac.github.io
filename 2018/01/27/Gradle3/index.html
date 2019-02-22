@@ -61,7 +61,7 @@
 	            <a href="#s1">分类</a>
 	                    <ul class="submenu">
 	                        <li>
-	                        <a class="category-link" href="/categories/Gradle教程/">Gradle教程</a></li><li><a class="category-link" href="/categories/生活/">生活</a></li><li><a class="category-link" href="/categories/电脑技术/">电脑技术</a>
+	                        <a class="category-link" href="/categories/CMAKE总结/">CMAKE总结</a></li><li><a class="category-link" href="/categories/Gradle教程/">Gradle教程</a></li><li><a class="category-link" href="/categories/Java教程/">Java教程</a></li><li><a class="category-link" href="/categories/Kotlin教程/">Kotlin教程</a></li><li><a class="category-link" href="/categories/生活/">生活</a></li><li><a class="category-link" href="/categories/电脑技术/">电脑技术</a>
 	                    </ul>
 	        </li>
 	        
@@ -71,7 +71,7 @@
 	            <a href="#s1">归档</a>
 	                    <ul class="submenu">
 	                        <li>
-	                        <a class="archive-link" href="/archives/2018/01/">January 2018</a></li><li><a class="archive-link" href="/archives/2016/11/">November 2016</a></li><li><a class="archive-link" href="/archives/2016/10/">October 2016</a>
+	                        <a class="archive-link" href="/archives/2019/02/">February 2019</a></li><li><a class="archive-link" href="/archives/2018/01/">January 2018</a></li><li><a class="archive-link" href="/archives/2016/11/">November 2016</a></li><li><a class="archive-link" href="/archives/2016/10/">October 2016</a>
 	                    </ul>
 	        </li>
 	        
@@ -106,37 +106,37 @@
 
         <div id="main" >
             <div class ="post_page_title_img" style="height: 25rem;background-image: url(https://timgsa.baidu.com/timg?image&amp;quality=80&amp;size=b9999_10000&amp;sec=1517148693443&amp;di=be20fb16f81144a2eafc668a8e35a626&amp;imgtype=0&amp;src=http%3A%2F%2Fstatic.open-open.com%2Flib%2FuploadImg%2F20160427%2F20160427151819_320.jpg);background-position: center; background-repeat:no-repeat; background-size:cover;-moz-background-size:cover;overflow:hidden;" >
-                <a href="#" style="padding: 4rem 4rem 2rem 4rem ;"><h2 >Gradle教程3---读懂gradle</h2></a>
+                <a href="#" style="padding: 4rem 4rem 2rem 4rem ;"><h2 >Gradle教程3---读懂Gradle</h2></a>
             </div>
             <!-- Post -->
             <div class="typo" style="padding: 3rem;">
-                <h3 id="Gradle构建时并不是一开始就顺序执行build-gradle中的内容，而是分为两个阶段，配置阶段和执行阶段。在配置阶段会先读取Property、处理依赖等等。然后执行。"><a href="#Gradle构建时并不是一开始就顺序执行build-gradle中的内容，而是分为两个阶段，配置阶段和执行阶段。在配置阶段会先读取Property、处理依赖等等。然后执行。" class="headerlink" title="Gradle构建时并不是一开始就顺序执行build.gradle中的内容，而是分为两个阶段，配置阶段和执行阶段。在配置阶段会先读取Property、处理依赖等等。然后执行。"></a>Gradle构建时并不是一开始就顺序执行build.gradle中的内容，而是分为两个阶段，配置阶段和执行阶段。在配置阶段会先读取Property、处理依赖等等。然后执行。</h3><p>1、对于每一个Task，Gradle都会在Project中创建一个同名的Property，所以我们可以将该Task当作Property来访问。  </p>
-<p>2、Groovy的数据类bean类似Scala和Kotlin，都会自动生成setter和getter方法  </p>
-<pre><code>calss Person{
-    private String name; //虽然是私有的，但是可以访问
-}
-</code></pre><p>3、大量的闭包  </p>
-<pre><code>task A{
-    Person p = new Person()
-    p.config{
-        name = &quot;张三&quot; //这里的name就是属于child的，因为c.delegate = child代码，所以对象就是child，整个代码块的环境都在child中了。
-    }
-    println p.child.name//出了代码块，所以就要写明调用对象
-}
+                <h3 id="groovy构建时并不是一开始就顺序执行build-groovy中的内容，而是分为两个阶段，配置阶段和执行阶段。在配置阶段会先读取Property、处理依赖等等。然后执行。"><a href="#groovy构建时并不是一开始就顺序执行build-groovy中的内容，而是分为两个阶段，配置阶段和执行阶段。在配置阶段会先读取Property、处理依赖等等。然后执行。" class="headerlink" title="groovy构建时并不是一开始就顺序执行build.groovy中的内容，而是分为两个阶段，配置阶段和执行阶段。在配置阶段会先读取Property、处理依赖等等。然后执行。"></a>groovy构建时并不是一开始就顺序执行build.groovy中的内容，而是分为两个阶段，配置阶段和执行阶段。在配置阶段会先读取Property、处理依赖等等。然后执行。</h3><p>1、对于每一个Task，groovy都会在Project中创建一个同名的Property，所以我们可以将该Task当作Property来访问。  </p>
+<p>2、groovy的数据类bean类似Scala和Kotlin，都会自动生成setter和getter方法  </p>
+<pre class="line-numbers language-groovy"><code class="language-groovy">calss Person<span class="token punctuation">{</span>
+    <span class="token keyword">private</span> String name<span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//虽然是私有的，但是可以访问</span>
+<span class="token punctuation">}</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<p>3、大量的闭包  </p>
+<pre class="line-numbers language-groovy"><code class="language-groovy">task A<span class="token punctuation">{</span>
+    Person p <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Person</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    p<span class="token operator">.</span>config<span class="token punctuation">{</span>
+        name <span class="token operator">=</span> <span class="token string">"张三"</span> <span class="token comment" spellcheck="true">//这里的name就是属于child的，因为c.delegate = child代码，所以对象就是child，整个代码块的环境都在child中了。</span>
+    <span class="token punctuation">}</span>
+    println p<span class="token operator">.</span>child<span class="token operator">.</span>name<span class="token comment" spellcheck="true">//出了代码块，所以就要写明调用对象</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">class</span> <span class="token class-name">Person</span><span class="token punctuation">{</span>
+    Child child <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Child</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token keyword">void</span> <span class="token function">config</span><span class="token punctuation">(</span>Closure c<span class="token punctuation">)</span><span class="token punctuation">{</span> <span class="token comment" spellcheck="true">//传一个闭包进来，也就是传一个代码块进来</span>
+        c<span class="token operator">.</span>delegate <span class="token operator">=</span> child <span class="token comment" spellcheck="true">//代理对象是child</span>
+        c<span class="token operator">.</span>setResolveStrategy Closure<span class="token operator">.</span>DELEGATE_FIRST <span class="token comment" spellcheck="true">//一些配置</span>
+        <span class="token function">c</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token comment" spellcheck="true">//执行闭包中的代码块</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">class</span> <span class="token class-name">Child</span><span class="token punctuation">{</span>
+    <span class="token keyword">private</span> String name<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-class Person{
-    Child child = new Child()
-    void config(Closure c){ //传一个闭包进来，也就是传一个代码块进来
-        c.delegate = child //代理对象是child
-        c.setResolveStrategy Closure.DELEGATE_FIRST //一些配置
-        c() //执行闭包中的代码块
-    }
-}
-
-class Child{
-    private String name;
-}
-</code></pre>
             </div>
 
             <!-- Post Comments -->
@@ -232,7 +232,7 @@ $('.btn_click_load').click(function() {
                 <li>Design: <a href="http://miccall.tech " style="border-bottom: none;">miccall</a></li>
             </ul>
             
-            	<span id="busuanzi_container_site_pv">2018总访问量<span id="busuanzi_value_site_pv"></span>次</span>
+            	<span id="busuanzi_container_site_pv">2019总访问量<span id="busuanzi_value_site_pv"></span>次</span>
 			
         </div>
     </div>

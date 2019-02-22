@@ -1,0 +1,261 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<link rel="bookmark"  type="image/x-icon"  href="/img/logo_miccall.png"/>
+	 <link rel="shortcut icon" href="/img/logo_miccall.png">
+	
+			
+    <title>
+    Hexo
+    </title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="/css/mic_main.css" />
+    <link rel="stylesheet" href="/css/dropdownMenu.css" />
+    
+    	<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+	
+    <noscript>
+        <link rel="stylesheet" href="/css/noscript.css" />
+    </noscript>
+
+			    <script src="/js/jquery.min.js"></script>
+    <script src="/js/jquery.scrollex.min.js"></script>
+    <script src="/js/jquery.scrolly.min.js"></script>
+    <script src="/js/skel.min.js"></script>
+    <script src="/js/util.js"></script>
+    <script src="/js/main.js"></script>
+	
+<link rel="stylesheet" href="/css/prism.css" type="text/css">
+<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
+    
+		
+<!-- Layouts -->
+
+
+
+<!--  代码渲染  -->
+<link rel="stylesheet" href="/css/prism_coy.css" />
+<link rel="stylesheet" href="/css/typo.css" />
+<!-- 文章页 -->
+<body class="is-loading">
+    <!-- Wrapper 外包 s-->
+    <div id="wrapper" class="fade-in">
+        <!-- Intro 头部显示 s -->
+        <!-- Intro 头部显示 e -->
+        <!-- Header 头部logo start -->
+        <header id="header">
+    <a href="/" class="logo">yzytmac</a>
+</header>
+        <!-- Nav 导航条 start -->
+        <nav id="nav" class="special" >
+            <ul class="menu links" >
+			<!-- Homepage  主页  --> 
+			<li >
+	            <a href="/" rel="nofollow">主页</a>
+	        </li>
+			<!-- categories_name  分类   --> 
+	        
+	        <li class="active">
+	            <a href="#s1">分类</a>
+	                    <ul class="submenu">
+	                        <li>
+	                        <a class="category-link" href="/categories/CMAKE总结/">CMAKE总结</a></li><li><a class="category-link" href="/categories/Gradle教程/">Gradle教程</a></li><li><a class="category-link" href="/categories/Java教程/">Java教程</a></li><li><a class="category-link" href="/categories/Kotlin教程/">Kotlin教程</a></li><li><a class="category-link" href="/categories/生活/">生活</a></li><li><a class="category-link" href="/categories/电脑技术/">电脑技术</a>
+	                    </ul>
+	        </li>
+	        
+	        <!-- archives  归档   --> 
+	        
+	        <li class="active">
+	            <a href="#s1">归档</a>
+	                    <ul class="submenu">
+	                        <li>
+	                        <a class="archive-link" href="/archives/2019/02/">February 2019</a></li><li><a class="archive-link" href="/archives/2018/01/">January 2018</a></li><li><a class="archive-link" href="/archives/2016/11/">November 2016</a></li><li><a class="archive-link" href="/archives/2016/10/">October 2016</a>
+	                    </ul>
+	        </li>
+	        
+	        
+		        <!-- Pages 自定义   -->
+		        
+		        <li>
+		            <a href="/about/" title="简历">
+		                简历
+		            </a>
+		        </li>
+		        
+		        <li>
+		            <a href="http://www.jimicloud.com/" title="团队">
+		                团队
+		            </a>
+		        </li>
+		        
+
+
+            </ul>
+            <!-- icons 图标   -->
+			<ul class="icons">
+		            
+		                <li><a href="https://github.com/yzytmac" class="icon fa-github"><span class="label">GitHub</span></a></li>
+		            
+		            
+		            
+		            
+			</ul>
+</nav>
+
+        <div id="main" >
+            <div class ="post_page_title_img" style="height: 25rem;background-image: url(https://timgsa.baidu.com/timg?image&amp;quality=80&amp;size=b9999_10000&amp;sec=1517214609323&amp;di=40d0cb3d0cacdcc718de20dccb81fa6d&amp;imgtype=0&amp;src=http%3A%2F%2Fimgup01.sj88.com%2F2017-06%2F30%2F01%2F1498755765289_0.jpg);background-position: center; background-repeat:no-repeat; background-size:cover;-moz-background-size:cover;overflow:hidden;" >
+                <a href="#" style="padding: 4rem 4rem 2rem 4rem ;"><h2 >Kotlin教程6---匿名函数和Lambda式</h2></a>
+            </div>
+            <!-- Post -->
+            <div class="typo" style="padding: 3rem;">
+                <h3 id="在kotlin中匿名函数就真的只是没名字而已，Lambada表达式是真的Lambada"><a href="#在kotlin中匿名函数就真的只是没名字而已，Lambada表达式是真的Lambada" class="headerlink" title="在kotlin中匿名函数就真的只是没名字而已，Lambada表达式是真的Lambada"></a>在kotlin中匿名函数就真的只是没名字而已，Lambada表达式是真的Lambada</h3><p>1、函数结构（函数类型）<br>先了解一个概念函数结构。就是参数及类型，返回值及类型的一个组合,如:</p>
+<pre class="line-numbers language-kotlin"><code class="language-kotlin"><span class="token keyword">fun</span> <span class="token function">funName</span><span class="token punctuation">(</span>x<span class="token operator">:</span>Int<span class="token punctuation">,</span>y<span class="token operator">:</span>Int<span class="token punctuation">)</span><span class="token operator">:</span>Int<span class="token punctuation">{</span><span class="token keyword">return</span> x<span class="token operator">-</span>y<span class="token punctuation">}</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>那么这个方法的函数结构就是</p>
+<pre class="line-numbers language-kotlin"><code class="language-kotlin"><span class="token punctuation">(</span>x<span class="token operator">:</span>Int<span class="token punctuation">,</span>y<span class="token operator">:</span>Int<span class="token punctuation">)</span><span class="token operator">-></span>Int
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>那么匿名函数和Lambda表达式就是该函数结构对应的函数字面值，如：</p>
+<pre class="line-numbers language-kotlin"><code class="language-kotlin"><span class="token keyword">fun</span> <span class="token function">add</span><span class="token punctuation">(</span>arg<span class="token operator">:</span><span class="token punctuation">(</span>x<span class="token operator">:</span>Int<span class="token punctuation">,</span>y<span class="token operator">:</span>Int<span class="token punctuation">)</span><span class="token operator">-></span>Int<span class="token punctuation">)</span><span class="token punctuation">{</span><span class="token operator">..</span><span class="token operator">..</span><span class="token operator">..</span><span class="token punctuation">}</span>  <span class="token comment" spellcheck="true">//有一个参数和返回值都是int型结构的函数作为参数，把整个函数结构作为一种数据类型来修饰该参数</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>2、Lambada表达式</p>
+<pre class="line-numbers language-kotlin"><code class="language-kotlin"><span class="token function">add</span><span class="token punctuation">(</span><span class="token punctuation">{</span>a<span class="token punctuation">,</span>b<span class="token operator">-></span>a<span class="token operator">+</span>b<span class="token punctuation">}</span><span class="token punctuation">)</span>  <span class="token comment" spellcheck="true">//大括号就是Lambda表达式</span>
+<span class="token function">add</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>a<span class="token punctuation">,</span>b<span class="token operator">-></span>a<span class="token operator">+</span>b<span class="token punctuation">}</span>  <span class="token comment" spellcheck="true">//当add方法的最后一个参数传lambada表达式时，lambda表达式可写在括号外面</span>
+add<span class="token punctuation">{</span>a<span class="token punctuation">,</span>b<span class="token operator">-></span>a<span class="token operator">+</span>b<span class="token punctuation">}</span>  <span class="token comment" spellcheck="true">//小括号中不写东西时就可以省略了</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<p>3、匿名函数</p>
+<pre class="line-numbers language-kotlin"><code class="language-kotlin"><span class="token function">add</span><span class="token punctuation">(</span><span class="token keyword">fun</span><span class="token punctuation">(</span>a<span class="token operator">:</span>Int<span class="token punctuation">,</span>b<span class="token operator">:</span>Int<span class="token punctuation">)</span><span class="token operator">:</span>Int<span class="token punctuation">{</span><span class="token keyword">return</span> a<span class="token operator">+</span>b<span class="token punctuation">}</span><span class="token punctuation">)</span>  <span class="token comment" spellcheck="true">//这种就是匿名函数，这个只能写在小括号中</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<ul>
+<li>注意：<br>  1、kotlin中Lambda表达式总是被大括号括起来，参数列表无小括号<br>  2、Lambda表达式可写在小括号中，小括号外，以及省略小括号都行<br>  3、Lambda表达式的参数有用不上的可以用_代替。如：<pre class="line-numbers language-kotlin"><code class="language-kotlin">  add（a<span class="token punctuation">,</span>_<span class="token operator">-></span>a<span class="token operator">+</span><span class="token number">10</span>）
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+  4、如果该lambda表达式的参数只有一个，那么在函数体中可以用约定好的it来替代该参数，而且连-&gt;都可以省略。这样就变成了add{}这种形式。  </li>
+</ul>
+<p>4、带接收者的匿名函数<br>其实就是方法扩展的匿名形式，如：</p>
+<pre class="line-numbers language-kotlin"><code class="language-kotlin"><span class="token comment" spellcheck="true">//正常的方法扩展</span>
+<span class="token keyword">fun</span> A<span class="token punctuation">.</span><span class="token function">haha</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span><span class="token punctuation">}</span>
+<span class="token comment" spellcheck="true">//匿名的方法扩展就是</span>
+<span class="token keyword">val</span> haha <span class="token operator">=</span> <span class="token keyword">fun</span> A<span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span><span class="token punctuation">}</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+<p>5、内联函数<br>高阶函数会形成闭包，就是函数内的函数会持有函数的引用。每个函数都是对象，而内存的分配和调用都会造成大量开销。说人话就是函数的执行过程就是从调用处跳转到函数体的地址中，执行完函数体又回到调用处地址，这样来回是会耗费时间的，而高阶函数更甚，因为函数里面还有函数。为了减小这种时间上的开销，就有了内联函数，用inline修饰。<br>他的原理就是将高阶函数的lambda表达式中的函数部分相当于直接复制到高阶函数体中，这样执行的时候就不会跳到lambda表达式所在的内存地址中去，就会减少一个来回的时间。</p>
+<pre class="line-numbers language-kotlin"><code class="language-kotlin"><span class="token keyword">inline</span> <span class="token keyword">fun</span> <span class="token function">show</span><span class="token punctuation">(</span>block<span class="token operator">:</span><span class="token punctuation">(</span>String<span class="token punctuation">)</span><span class="token operator">-></span>Unit<span class="token punctuation">)</span><span class="token punctuation">{</span><span class="token function">block</span><span class="token punctuation">(</span><span class="token string">"yzy"</span><span class="token punctuation">)</span><span class="token punctuation">}</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>这个show函数就是个内联函数。由定义可知，内联函数是针对于高阶函数来说的，如果普通的函数仅仅是加个inline关键字修饰是不算内联函数的 。  </p>
+<ul>
+<li>注意事项：像这种函数体小的高阶函数建议内联，而函数体较大的就不要用了。<br>内联函数不仅对函数产生影响，也对lambda表达式产生影响，都会把代码搞到函数调用点去，所以如果lambda表达式的函数体过大，不想内联，那么就可以用关键字noinline来修饰<pre class="line-numbers language-kotlin"><code class="language-kotlin"><span class="token keyword">inline</span> <span class="token keyword">fun</span> <span class="token function">show</span><span class="token punctuation">(</span>block<span class="token operator">:</span><span class="token punctuation">(</span>String<span class="token punctuation">)</span><span class="token operator">-></span>Unit，<span class="token keyword">noinline</span> block2<span class="token operator">:</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">-></span> Unit<span class="token punctuation">)</span><span class="token punctuation">{</span>
+  <span class="token function">block</span><span class="token punctuation">(</span><span class="token string">"yzy"</span><span class="token punctuation">)</span>；
+  <span class="token function">block</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+</li>
+</ul>
+<p>6、非局部返回<br>高阶函数的lambda表达式中如果要return需注意。<br>要么带标签return@funName 。funName就是高阶函数名，要带标签才能返回。<br>要么不带标签，那么该高阶函数必须是内联函数才可以。如上面的show函数。</p>
+<pre class="line-numbers language-kotlin"><code class="language-kotlin">show<span class="token punctuation">{</span>str <span class="token operator">-></span> <span class="token keyword">if</span> <span class="token punctuation">(</span>str <span class="token operator">==</span> <span class="token string">"yzy"</span><span class="token punctuation">)</span> <span class="token keyword">return</span> <span class="token punctuation">}</span>。<span class="token comment" spellcheck="true">//就不需要带标签就可以直接返回</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+            </div>
+
+            <!-- Post Comments -->
+            
+    <!-- 使用 DISQUS_CLICK -->
+<div id="disqus-comment">
+    <div id="disqus_thread"></div>
+
+<!-- add animation -->
+<style>
+	.disqus_click_btn {
+            line-height: 30px;
+            margin: 0;
+            min-width: 50px;
+            padding: 0 14px;
+            display: inline-block;
+            font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+            font-size: 14px;
+            font-weight: 400;
+            text-transform: uppercase;
+            letter-spacing: 0;
+            overflow: hidden;
+            will-change: box-shadow;
+            transition: box-shadow .2s cubic-bezier(.4, 0, 1, 1), background-color .2s cubic-bezier(.4, 0, .2, 1), color .2s cubic-bezier(.4, 0, .2, 1);
+            outline: 0;
+            cursor: pointer;
+            text-decoration: none;
+            text-align: center;
+            vertical-align: middle;
+            border: 0;
+            background: rgba(158, 158, 158, .2);
+            box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14), 0 3px 1px -2px rgba(0, 0, 0, .2), 0 1px 5px 0 rgba(0, 0, 0, .12);
+            color: #fff;
+            background-color: #7EC0EE;
+            text-shadow: 0
+        }
+</style>
+	
+<div class="btn_click_load" id="disqus_bt"> 
+    <button class="disqus_click_btn">点击查看评论</button>
+</div>
+
+<!--
+<script type="text/javascript">
+$('.btn_click_load').click(function() {
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'http-miccall-tech'; // required: replace example with your forum shortname
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+
+    document.getElementById('disqus_bt').style.display = "none";
+});
+</script>
+-->
+<script type="text/javascript">
+    var disqus_config = function () {
+        this.page.url = 'http://yoursite.com/2018/01/28/Kotlin6/';  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = 'http://yoursite.com/2018/01/28/Kotlin6/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+</script>
+
+<script type="text/javascript">
+    $('.btn_click_load').click(function() {  //click to load comments
+        (function() { // DON'T EDIT BELOW THIS LINE
+            var d = document;
+            var s = d.createElement('script');
+            s.src = '//http-miccall-tech.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', + new Date());
+            (d.head || d.body).appendChild(s);
+        })();
+        $('.btn_click_load').css('display','none');
+    });
+</script>
+</div>
+<style>
+    #disqus-comment{
+        background-color: #eee;
+        padding: 2pc;
+    }
+</style>
+
+
+        </div>
+        <!-- Copyright 版权 start -->
+                <div id="copyright">
+            <ul>
+                <li>&copy;Powered By <a href="https://hexo.io/zh-cn/" style="border-bottom: none;">hexo</a></li>
+                <li>Design: <a href="http://miccall.tech " style="border-bottom: none;">miccall</a></li>
+            </ul>
+            
+            	<span id="busuanzi_container_site_pv">2019总访问量<span id="busuanzi_value_site_pv"></span>次</span>
+			
+        </div>
+    </div>
+</body>
+
+
+
+ 	
+</html>

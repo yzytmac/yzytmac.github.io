@@ -1,0 +1,271 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<link rel="bookmark"  type="image/x-icon"  href="/img/logo_miccall.png"/>
+	 <link rel="shortcut icon" href="/img/logo_miccall.png">
+	
+			
+    <title>
+    Hexo
+    </title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="/css/mic_main.css" />
+    <link rel="stylesheet" href="/css/dropdownMenu.css" />
+    
+    	<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+	
+    <noscript>
+        <link rel="stylesheet" href="/css/noscript.css" />
+    </noscript>
+
+			    <script src="/js/jquery.min.js"></script>
+    <script src="/js/jquery.scrollex.min.js"></script>
+    <script src="/js/jquery.scrolly.min.js"></script>
+    <script src="/js/skel.min.js"></script>
+    <script src="/js/util.js"></script>
+    <script src="/js/main.js"></script>
+	
+<link rel="stylesheet" href="/css/prism.css" type="text/css">
+<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
+    
+		
+<!-- Layouts -->
+
+
+
+<!--  代码渲染  -->
+<link rel="stylesheet" href="/css/prism_coy.css" />
+<link rel="stylesheet" href="/css/typo.css" />
+<!-- 文章页 -->
+<body class="is-loading">
+    <!-- Wrapper 外包 s-->
+    <div id="wrapper" class="fade-in">
+        <!-- Intro 头部显示 s -->
+        <!-- Intro 头部显示 e -->
+        <!-- Header 头部logo start -->
+        <header id="header">
+    <a href="/" class="logo">yzytmac</a>
+</header>
+        <!-- Nav 导航条 start -->
+        <nav id="nav" class="special" >
+            <ul class="menu links" >
+			<!-- Homepage  主页  --> 
+			<li >
+	            <a href="/" rel="nofollow">主页</a>
+	        </li>
+			<!-- categories_name  分类   --> 
+	        
+	        <li class="active">
+	            <a href="#s1">分类</a>
+	                    <ul class="submenu">
+	                        <li>
+	                        <a class="category-link" href="/categories/CMAKE总结/">CMAKE总结</a></li><li><a class="category-link" href="/categories/Gradle教程/">Gradle教程</a></li><li><a class="category-link" href="/categories/Java教程/">Java教程</a></li><li><a class="category-link" href="/categories/Kotlin教程/">Kotlin教程</a></li><li><a class="category-link" href="/categories/生活/">生活</a></li><li><a class="category-link" href="/categories/电脑技术/">电脑技术</a>
+	                    </ul>
+	        </li>
+	        
+	        <!-- archives  归档   --> 
+	        
+	        <li class="active">
+	            <a href="#s1">归档</a>
+	                    <ul class="submenu">
+	                        <li>
+	                        <a class="archive-link" href="/archives/2019/02/">February 2019</a></li><li><a class="archive-link" href="/archives/2018/01/">January 2018</a></li><li><a class="archive-link" href="/archives/2016/11/">November 2016</a></li><li><a class="archive-link" href="/archives/2016/10/">October 2016</a>
+	                    </ul>
+	        </li>
+	        
+	        
+		        <!-- Pages 自定义   -->
+		        
+		        <li>
+		            <a href="/about/" title="简历">
+		                简历
+		            </a>
+		        </li>
+		        
+		        <li>
+		            <a href="http://www.jimicloud.com/" title="团队">
+		                团队
+		            </a>
+		        </li>
+		        
+
+
+            </ul>
+            <!-- icons 图标   -->
+			<ul class="icons">
+		            
+		                <li><a href="https://github.com/yzytmac" class="icon fa-github"><span class="label">GitHub</span></a></li>
+		            
+		            
+		            
+		            
+			</ul>
+</nav>
+
+        <div id="main" >
+            <div class ="post_page_title_img" style="height: 25rem;background-image: url(https://timgsa.baidu.com/timg?image&amp;quality=80&amp;size=b9999_10000&amp;sec=1517214609323&amp;di=40d0cb3d0cacdcc718de20dccb81fa6d&amp;imgtype=0&amp;src=http%3A%2F%2Fimgup01.sj88.com%2F2017-06%2F30%2F01%2F1498755765289_0.jpg);background-position: center; background-repeat:no-repeat; background-size:cover;-moz-background-size:cover;overflow:hidden;" >
+                <a href="#" style="padding: 4rem 4rem 2rem 4rem ;"><h2 >Kotlin教程5---条件语句</h2></a>
+            </div>
+            <!-- Post -->
+            <div class="typo" style="padding: 3rem;">
+                <h3 id="if-else、while-、do-while-、for循环"><a href="#if-else、while-、do-while-、for循环" class="headerlink" title="if else、while(){}、do{}while()、for循环"></a>if else、while(){}、do{}while()、for循环</h3><p>1、简单for循环</p>
+<pre class="line-numbers language-kotlin"><code class="language-kotlin"><span class="token keyword">for</span><span class="token punctuation">(</span>i <span class="token keyword">in</span> <span class="token number">0</span><span class="token operator">..</span><span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">{</span><span class="token punctuation">}</span> <span class="token comment" spellcheck="true">//从0到10，包含10。i in 0 until 10不包含10</span>
+<span class="token keyword">for</span><span class="token punctuation">(</span>i <span class="token keyword">in</span> <span class="token number">10</span> downTo <span class="token number">0</span><span class="token punctuation">)</span> <span class="token comment" spellcheck="true">// 从10到0</span>
+<span class="token keyword">for</span><span class="token punctuation">(</span>i <span class="token keyword">in</span> <span class="token number">0</span><span class="token operator">..</span><span class="token number">10</span> step <span class="token number">2</span><span class="token punctuation">)</span>  <span class="token comment" spellcheck="true">//每2个一迭代（0，2，4，6，8，10）</span>
+<span class="token keyword">for</span><span class="token punctuation">(</span>i <span class="token keyword">in</span> <span class="token number">0</span><span class="token operator">..</span><span class="token number">10</span> step <span class="token number">3</span><span class="token punctuation">)</span>  <span class="token comment" spellcheck="true">//每3个一迭代（0，3，6，9）</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+<ul>
+<li>in表示在某个区间，！in表示不在某个区间  </li>
+</ul>
+<p>迭代for循环</p>
+<pre class="line-numbers language-kotlin"><code class="language-kotlin"><span class="token keyword">for</span><span class="token punctuation">(</span>item <span class="token keyword">in</span> collection<span class="token punctuation">)</span><span class="token punctuation">{</span><span class="token punctuation">}</span>  <span class="token comment" spellcheck="true">//迭代其中的元素</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>得到索引</p>
+<pre class="line-numbers language-kotlin"><code class="language-kotlin"><span class="token keyword">for</span> <span class="token punctuation">(</span>i <span class="token keyword">in</span> array<span class="token punctuation">.</span>indices<span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token punctuation">}</span> <span class="token comment" spellcheck="true">//得到索引</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>增强的</p>
+<pre class="line-numbers language-kotlin"><code class="language-kotlin"><span class="token keyword">for</span><span class="token punctuation">(</span><span class="token punctuation">(</span>index<span class="token punctuation">,</span>value<span class="token punctuation">)</span> <span class="token keyword">in</span> collect<span class="token punctuation">.</span><span class="token function">withIndex</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>  <span class="token comment" spellcheck="true">//得到索引和值</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>2、when语句<br>比switch-case更加强大.甚至可以将整个when语句块作为返回值return出去</p>
+<pre class="line-numbers language-kotlin"><code class="language-kotlin"><span class="token keyword">when</span><span class="token punctuation">(</span>x<span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token number">1</span> <span class="token operator">-></span> <span class="token function">print</span><span class="token punctuation">(</span><span class="token string">"x is "</span><span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">)</span>
+    <span class="token number">2</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">,</span><span class="token number">4</span><span class="token operator">-></span> <span class="token function">print</span><span class="token punctuation">(</span><span class="token string">"x is 2 or 3 or 4"</span><span class="token punctuation">)</span> 
+    <span class="token keyword">in</span> <span class="token number">5</span><span class="token operator">..</span><span class="token number">10</span> <span class="token operator">-></span> <span class="token function">print</span><span class="token punctuation">(</span><span class="token string">"x is 5&lt;=x&lt;=10"</span><span class="token punctuation">)</span>
+    <span class="token function">parseInt</span><span class="token punctuation">(</span><span class="token string">"11"</span><span class="token punctuation">)</span> <span class="token operator">-></span> <span class="token function">print</span><span class="token punctuation">(</span><span class="token string">"x is 11"</span><span class="token punctuation">)</span>
+    <span class="token operator">!</span><span class="token keyword">in</span> <span class="token number">12</span><span class="token operator">..</span><span class="token number">15</span><span class="token operator">-></span><span class="token function">print</span><span class="token punctuation">(</span><span class="token string">"x is not in 12 to 15"</span><span class="token punctuation">)</span>
+    <span class="token keyword">else</span> <span class="token operator">-></span> <span class="token function">print</span><span class="token punctuation">(</span><span class="token string">"unknow"</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>还可以不传参数当if else来用</p>
+<pre class="line-numbers language-kotlin"><code class="language-kotlin"><span class="token keyword">when</span><span class="token punctuation">{</span>
+    x<span class="token operator">></span><span class="token number">5</span> <span class="token operator">-></span> <span class="token function">print</span><span class="token punctuation">(</span><span class="token string">"x is bigger than 5"</span><span class="token punctuation">)</span>
+    x<span class="token operator">&lt;</span><span class="token number">10</span> <span class="token operator">-></span> <span class="token function">print</span><span class="token punctuation">(</span><span class="token string">"x is less than 10"</span><span class="token punctuation">)</span>
+    <span class="token keyword">else</span> <span class="token operator">-></span> <span class="token function">print</span><span class="token punctuation">(</span><span class="token string">"unkonw"</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>3、函数嵌套。支持break、continue、return以及标签<br>加标签：tabName@<br>使用标签：</p>
+<pre class="line-numbers language-kotlin"><code class="language-kotlin"><span class="token keyword">break</span><span class="token label symbol">@tabName</span> 、<span class="token keyword">continue</span><span class="token label symbol">@tabName</span> 、<span class="token keyword">return</span><span class="token label symbol">@tabName</span> 、<span class="token keyword">return</span><span class="token label symbol">@tabName</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>4、作用域函数with，如：</p>
+<pre class="line-numbers language-kotlin"><code class="language-kotlin"><span class="token keyword">class</span> Person<span class="token punctuation">{</span>
+    <span class="token keyword">fun</span> <span class="token function">eat</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span><span class="token punctuation">}</span>
+    <span class="token keyword">fun</span> <span class="token function">speak</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span><span class="token punctuation">}</span>
+    <span class="token keyword">fun</span> <span class="token function">look</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span><span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">val</span> p <span class="token operator">=</span> <span class="token function">Person</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token comment" spellcheck="true">//调用Person对象的三个方法。正常情况下我们用p点方法名，这里有了with就可以省略了</span>
+<span class="token function">with</span><span class="token punctuation">(</span>p<span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token comment" spellcheck="true">//这三个方法的范围就是Person对象，所以前面就可以省略对象点了</span>
+    <span class="token function">eat</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    speak90
+    <span class="token function">look</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+            </div>
+
+            <!-- Post Comments -->
+            
+    <!-- 使用 DISQUS_CLICK -->
+<div id="disqus-comment">
+    <div id="disqus_thread"></div>
+
+<!-- add animation -->
+<style>
+	.disqus_click_btn {
+            line-height: 30px;
+            margin: 0;
+            min-width: 50px;
+            padding: 0 14px;
+            display: inline-block;
+            font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+            font-size: 14px;
+            font-weight: 400;
+            text-transform: uppercase;
+            letter-spacing: 0;
+            overflow: hidden;
+            will-change: box-shadow;
+            transition: box-shadow .2s cubic-bezier(.4, 0, 1, 1), background-color .2s cubic-bezier(.4, 0, .2, 1), color .2s cubic-bezier(.4, 0, .2, 1);
+            outline: 0;
+            cursor: pointer;
+            text-decoration: none;
+            text-align: center;
+            vertical-align: middle;
+            border: 0;
+            background: rgba(158, 158, 158, .2);
+            box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14), 0 3px 1px -2px rgba(0, 0, 0, .2), 0 1px 5px 0 rgba(0, 0, 0, .12);
+            color: #fff;
+            background-color: #7EC0EE;
+            text-shadow: 0
+        }
+</style>
+	
+<div class="btn_click_load" id="disqus_bt"> 
+    <button class="disqus_click_btn">点击查看评论</button>
+</div>
+
+<!--
+<script type="text/javascript">
+$('.btn_click_load').click(function() {
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'http-miccall-tech'; // required: replace example with your forum shortname
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+
+    document.getElementById('disqus_bt').style.display = "none";
+});
+</script>
+-->
+<script type="text/javascript">
+    var disqus_config = function () {
+        this.page.url = 'http://yoursite.com/2018/01/28/Kotlin5/';  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = 'http://yoursite.com/2018/01/28/Kotlin5/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+</script>
+
+<script type="text/javascript">
+    $('.btn_click_load').click(function() {  //click to load comments
+        (function() { // DON'T EDIT BELOW THIS LINE
+            var d = document;
+            var s = d.createElement('script');
+            s.src = '//http-miccall-tech.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', + new Date());
+            (d.head || d.body).appendChild(s);
+        })();
+        $('.btn_click_load').css('display','none');
+    });
+</script>
+</div>
+<style>
+    #disqus-comment{
+        background-color: #eee;
+        padding: 2pc;
+    }
+</style>
+
+
+        </div>
+        <!-- Copyright 版权 start -->
+                <div id="copyright">
+            <ul>
+                <li>&copy;Powered By <a href="https://hexo.io/zh-cn/" style="border-bottom: none;">hexo</a></li>
+                <li>Design: <a href="http://miccall.tech " style="border-bottom: none;">miccall</a></li>
+            </ul>
+            
+            	<span id="busuanzi_container_site_pv">2019总访问量<span id="busuanzi_value_site_pv"></span>次</span>
+			
+        </div>
+    </div>
+</body>
+
+
+
+ 	
+</html>

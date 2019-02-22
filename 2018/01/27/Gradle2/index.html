@@ -61,7 +61,7 @@
 	            <a href="#s1">分类</a>
 	                    <ul class="submenu">
 	                        <li>
-	                        <a class="category-link" href="/categories/Gradle教程/">Gradle教程</a></li><li><a class="category-link" href="/categories/生活/">生活</a></li><li><a class="category-link" href="/categories/电脑技术/">电脑技术</a>
+	                        <a class="category-link" href="/categories/CMAKE总结/">CMAKE总结</a></li><li><a class="category-link" href="/categories/Gradle教程/">Gradle教程</a></li><li><a class="category-link" href="/categories/Java教程/">Java教程</a></li><li><a class="category-link" href="/categories/Kotlin教程/">Kotlin教程</a></li><li><a class="category-link" href="/categories/生活/">生活</a></li><li><a class="category-link" href="/categories/电脑技术/">电脑技术</a>
 	                    </ul>
 	        </li>
 	        
@@ -71,7 +71,7 @@
 	            <a href="#s1">归档</a>
 	                    <ul class="submenu">
 	                        <li>
-	                        <a class="archive-link" href="/archives/2018/01/">January 2018</a></li><li><a class="archive-link" href="/archives/2016/11/">November 2016</a></li><li><a class="archive-link" href="/archives/2016/10/">October 2016</a>
+	                        <a class="archive-link" href="/archives/2019/02/">February 2019</a></li><li><a class="archive-link" href="/archives/2018/01/">January 2018</a></li><li><a class="archive-link" href="/archives/2016/11/">November 2016</a></li><li><a class="archive-link" href="/archives/2016/10/">October 2016</a>
 	                    </ul>
 	        </li>
 	        
@@ -110,33 +110,38 @@
             </div>
             <!-- Post -->
             <div class="typo" style="padding: 3rem;">
-                <h3 id="Gradle的Project从本质上来说就是一个task的容器，一个task和Ant中的target一样，是一个逻辑执行单元。所有的task都存放在Project的taskContainer中。tasks就是管理这个容器的一个task，tasks-size-就可以得到容器中有多少个task。"><a href="#Gradle的Project从本质上来说就是一个task的容器，一个task和Ant中的target一样，是一个逻辑执行单元。所有的task都存放在Project的taskContainer中。tasks就是管理这个容器的一个task，tasks-size-就可以得到容器中有多少个task。" class="headerlink" title="Gradle的Project从本质上来说就是一个task的容器，一个task和Ant中的target一样，是一个逻辑执行单元。所有的task都存放在Project的taskContainer中。tasks就是管理这个容器的一个task，tasks.size()就可以得到容器中有多少个task。"></a>Gradle的Project从本质上来说就是一个task的容器，一个task和Ant中的target一样，是一个逻辑执行单元。所有的task都存放在Project的taskContainer中。tasks就是管理这个容器的一个task，tasks.size()就可以得到容器中有多少个task。</h3><p>1、利用Gradle的DSL语言创建  </p>
-<pre><code>task task1{xxx} //创建一个简单的task
-task task2 &lt;&lt;{xxx} //在最后面追加代码，和task3意义一样
-task task3{
-    doLast{ xxx} //在最后面追加代码
-}
-task task4{
-    doFirst{xxx} //在最前面加入代码
-}
-</code></pre><p>2、通过tasks的create方法像容器中添加task  </p>
-<pre><code>tasks.create(name: &#39;task5&#39;)&lt;&lt;{xxx}
-</code></pre><p>name后面的task5就是新task的名字  </p>
+                <h3 id="groovy的Project从本质上来说就是一个task的容器，一个task和Ant中的target一样，是一个逻辑执行单元。所有的task都存放在Project的taskContainer中。tasks就是管理这个容器的一个task，tasks-size-就可以得到容器中有多少个task。"><a href="#groovy的Project从本质上来说就是一个task的容器，一个task和Ant中的target一样，是一个逻辑执行单元。所有的task都存放在Project的taskContainer中。tasks就是管理这个容器的一个task，tasks-size-就可以得到容器中有多少个task。" class="headerlink" title="groovy的Project从本质上来说就是一个task的容器，一个task和Ant中的target一样，是一个逻辑执行单元。所有的task都存放在Project的taskContainer中。tasks就是管理这个容器的一个task，tasks.size()就可以得到容器中有多少个task。"></a>groovy的Project从本质上来说就是一个task的容器，一个task和Ant中的target一样，是一个逻辑执行单元。所有的task都存放在Project的taskContainer中。tasks就是管理这个容器的一个task，tasks.size()就可以得到容器中有多少个task。</h3><p>1、利用groovy的DSL语言创建  </p>
+<pre class="line-numbers language-groovy"><code class="language-groovy">task task1<span class="token punctuation">{</span>xxx<span class="token punctuation">}</span> <span class="token comment" spellcheck="true">//创建一个简单的task</span>
+task task2 <span class="token operator">&lt;&lt;</span><span class="token punctuation">{</span>xxx<span class="token punctuation">}</span> <span class="token comment" spellcheck="true">//在最后面追加代码，和task3意义一样</span>
+task task3<span class="token punctuation">{</span>
+    doLast<span class="token punctuation">{</span> xxx<span class="token punctuation">}</span> <span class="token comment" spellcheck="true">//在最后面追加代码</span>
+<span class="token punctuation">}</span>
+task task4<span class="token punctuation">{</span>
+    doFirst<span class="token punctuation">{</span>xxx<span class="token punctuation">}</span> <span class="token comment" spellcheck="true">//在最前面加入代码</span>
+<span class="token punctuation">}</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>2、通过tasks的create方法像容器中添加task  </p>
+<pre class="line-numbers language-groovy"><code class="language-groovy">tasks<span class="token operator">.</span><span class="token function">create</span><span class="token punctuation">(</span>name<span class="token punctuation">:</span> <span class="token string">'task5'</span><span class="token punctuation">)</span><span class="token operator">&lt;&lt;</span><span class="token punctuation">{</span>xxx<span class="token punctuation">}</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>name后面的task5就是新task的名字  </p>
 <p>3、配置task  </p>
 <p>每个task还包含一些属性Property，默认的有logger、description等，一些特定的task还有特定的属性，如Copy的task还包含from和to<br>①在创建的时候进行配置</p>
-<pre><code>task task6&lt;&lt;{
-    description = &quot;我是task6&quot;
+<pre class="line-numbers language-groovy"><code class="language-groovy">task task6<span class="token operator">&lt;&lt;</span><span class="token punctuation">{</span>
+    description <span class="token operator">=</span> <span class="token string">"我是task6"</span>
     xxx
-}
-</code></pre><p>②闭包的方式创建  </p>
-<pre><code>task task7&lt;&lt;{xxx}
-task7{ description = &quot;我是task7&quot;} //顺序不影响，因为会先加载配置，然后才真正的执行
-</code></pre><p>③通过configure来进行配置  </p>
-<pre><code>task task8&lt;&lt;{xxx}
-task8.configure{
-    description = &quot;我是task8&quot;
-}
-</code></pre><p>实际上所有的配置在内部都是调用的configure进行配置的</p>
+<span class="token punctuation">}</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+<p>②闭包的方式创建  </p>
+<pre class="line-numbers language-groovy"><code class="language-groovy">task task7<span class="token operator">&lt;&lt;</span><span class="token punctuation">{</span>xxx<span class="token punctuation">}</span>
+task7<span class="token punctuation">{</span> description <span class="token operator">=</span> <span class="token string">"我是task7"</span><span class="token punctuation">}</span> <span class="token comment" spellcheck="true">//顺序不影响，因为会先加载配置，然后才真正的执行</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<p>③通过configure来进行配置  </p>
+<pre class="line-numbers language-groovy"><code class="language-groovy">task task8<span class="token operator">&lt;&lt;</span><span class="token punctuation">{</span>xxx<span class="token punctuation">}</span>
+task8<span class="token operator">.</span>configure<span class="token punctuation">{</span>
+    description <span class="token operator">=</span> <span class="token string">"我是task8"</span>
+<span class="token punctuation">}</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+<p>实际上所有的配置在内部都是调用的configure进行配置的</p>
 
             </div>
 
@@ -233,7 +238,7 @@ $('.btn_click_load').click(function() {
                 <li>Design: <a href="http://miccall.tech " style="border-bottom: none;">miccall</a></li>
             </ul>
             
-            	<span id="busuanzi_container_site_pv">2018总访问量<span id="busuanzi_value_site_pv"></span>次</span>
+            	<span id="busuanzi_container_site_pv">2019总访问量<span id="busuanzi_value_site_pv"></span>次</span>
 			
         </div>
     </div>
