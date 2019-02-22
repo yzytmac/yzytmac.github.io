@@ -61,7 +61,7 @@
 	            <a href="#s1">分类</a>
 	                    <ul class="submenu">
 	                        <li>
-	                        <a class="category-link" href="/categories/CMAKE教程/">CMAKE教程</a></li><li><a class="category-link" href="/categories/Gradle教程/">Gradle教程</a></li><li><a class="category-link" href="/categories/Java教程/">Java教程</a></li><li><a class="category-link" href="/categories/Kotlin教程/">Kotlin教程</a></li><li><a class="category-link" href="/categories/生活/">生活</a></li><li><a class="category-link" href="/categories/电脑技术/">电脑技术</a>
+	                        <a class="category-link" href="/categories/CMAKE教程/">CMAKE教程</a></li><li><a class="category-link" href="/categories/Gradle教程/">Gradle教程</a></li><li><a class="category-link" href="/categories/Java教程/">Java教程</a></li><li><a class="category-link" href="/categories/Kotlin教程/">Kotlin教程</a></li><li><a class="category-link" href="/categories/博客Readme/">博客Readme</a></li><li><a class="category-link" href="/categories/生活/">生活</a></li><li><a class="category-link" href="/categories/电脑技术/">电脑技术</a>
 	                    </ul>
 	        </li>
 	        
@@ -105,7 +105,7 @@
 </nav>
 
         <div id="main" >
-            <div class ="post_page_title_img" style="height: 25rem;background-image: url();background-position: center; background-repeat:no-repeat; background-size:cover;-moz-background-size:cover;overflow:hidden;" >
+            <div class ="post_page_title_img" style="height: 25rem;background-image: url(https://gitee.com/yzytmac/resource/raw/master/cmake.jpg);background-position: center; background-repeat:no-repeat; background-size:cover;-moz-background-size:cover;overflow:hidden;" >
                 <a href="#" style="padding: 4rem 4rem 2rem 4rem ;"><h2 >CMAKE总结</h2></a>
             </div>
             <!-- Post -->
@@ -293,7 +293,7 @@ file(READ filename variable [LIMIT numBytes] [OFFSET offset] [HEX])
 
 file(STRINGS filename variable [LIMIT_COUNT num] [LIMIT_INPUT numBytes] [LIMIT_OUTPUT numBytes] [LENGTH_MINIMUM numBytes] [LENGTH_MAXIMUM numBytes] [NEWLINE_CONSUME] [REGEX regex] [NO_HEX_CONVERSION])
 #STRINGS标志，将会从一个文件中将ASCII字符串的list解析出来，然后储存在variable变量中，文件中的二进制数据将会被忽略，回车换行符会 被忽略（可以设置NO_HEX_CONVERSION选项来禁止这个功能）。
-#LIMIT_COUNT：设定了返回字符串的最大数量；LIMIT_INPUT：设置了从 输入文件中读取的最大字节数；LIMIT_OUTPUT：设置了在输出变量中允许 存储的最大字节数；LENGTH_MINIMUM：设置了返回字符串的最小长度， 小于该长度的字符串将会被忽略；LENGTH_MAXIMUM设置了返回字符串 的最大长度，大于该长度的字符串将会被忽略；NEWLINE_CONSUME：该 标志允许新行被包含到字符串中，而不是终止他们；REGEX：指定了返回的 字符串必须满足的正则表达式 典型的使用方式：file(STRINGS myfile.txt myfile) 该命令在变量myfile中储存了一个list,该list每一项是myfile.txt中的一行文本 file(GLOB variable [RELATIVE path] [globbing expressions]...) 解释：GLOB：该选项将会为所有匹配表达式的文件生成一个文件list，并将 该list存放在variable 里面，文件名的查询表达式和正则表达式类似， 查询表达式的例子：①*.cpp -匹配所有后缀是.cpp的文件②*.vb? -匹配文件 后缀是.vba——.vbz的文件③f[3-5].txt ：匹配f3.txt,f4.txt,f5.txt文件 file(GLOB_RECURSE variable [RELATIVE path] [FOLLOW_SYMLINKS] [globbing expressions]...) 解释：GLOB_RECURSE会生成一个类似于通常GLOB选项的list，不过该选项 可以递归查找文件中的匹配项 比如：/dir/*.py -就会匹配所有在/dir文件下面的python文件， file(RENAME <oldname> <newname>) 解释：RENAME选项对同一个文件系统下的一个文件或目录重命名 file(REMOVE [file1 ...]) 解释：REMOVE选项将会删除指定的文件，包括在子路径下的文件 file(REMOVE_RECURSE [file1 ...]) 解释：REMOVE_RECURSE选项会删除给定的文件以及目录，包括非空目录 file(MAKE_DIRECTORY [directory1 directory2 ...]) 解释：MAKE_DIRECTORY选项将会创建指定的目录，如果它们的父目录不 存在时，同样也会创建 file(RELATIVE_PATH variable directory file) 解释：RELATIVE_PATH选项会确定从direcroty参数到指定文件的相对路 径，然后存到变量variable中 file(TO_CMAKE_PATH path result) 解释：TO_CMAKE_PATH选项会把path转换为一个以unix的/开头的cmake风格的路径
+
 
 file(TO_NATIVE_PATH path result)
 #TO_NATIVE_PATH选项与TO_CMAKE_PATH选项很相似，但是它会把cmake风格的路径转换为本地路径风格
@@ -321,14 +321,9 @@ if(BZIP2_FOUND)
     message("找到了")
 endif(BZIP2_FOUND)
 
-
-
-
-
-
-
 CMAKE_MODULE_PATH
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+未完待续...
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <h2 id="八-其他命令"><a href="#八-其他命令" class="headerlink" title="八.其他命令"></a>八.其他命令</h2><pre class="line-numbers language-cmake"><code class="language-cmake">#执行系统命令,参数一固定,参数二命令名称,后面还有很多参数l懒得解释了
 execute_process(COMMAND cmd_name)
 
