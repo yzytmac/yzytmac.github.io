@@ -158,6 +158,7 @@
 <script type="text/javascript">
     var hashId = md5(location.pathname);
     console.log("----yzyName----->"+location.pathname);
+    console.log("----yzy解码----->"+decodeURIComponent(location.pathname));
     console.log("----yzymd5----->"+hashId);
     var gitalk = new Gitalk({
         clientID: 'f1b19f7e6b00bb0ad80d',
