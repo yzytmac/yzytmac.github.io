@@ -277,14 +277,14 @@ message(fun---->${var_fun})#为空,因为访问不到var_fun
 message(macro---->${var_macro})#不为空,访问到了
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <h2 id="六-其他文件交互"><a href="#六-其他文件交互" class="headerlink" title="六.其他文件交互"></a>六.其他文件交互</h2><pre class="line-numbers language-cmake"><code class="language-cmake">#将外部input文件拷贝到output文件中
-configure_file(<input> <output> [COPYONLY] [ESCAPE_QUOTES] [@ONLY] [NEWLINE_STYLE [UNIX|DOS|WIN32|LF|CRLF]])
+configure_file(<inputFile> <outputFile> [COPYONLY] [ESCAPE_QUOTES] [@ONLY] [NEWLINE_STYLE [UNIX|DOS|WIN32|LF|CRLF]])
 #COPYONLY：只拷贝文件，不进行任何的变量替换。这个选项在指定了 NEWLINE_STYLE 选项时不能使用（无效）。 
 #ESCAPE_QUOTES：躲过任何的反斜杠(C风格)转义。
 
 注：躲避转义，比如你有个变量在CMake中是这样的 set(FOO_STRING "\"foo\"") 那么在没有 ESCAPE_QUOTES 选项的状态下，通过变量替换将变为 ""foo""，如果指定了 ESCAPE_QUOTES 选项，变量将不变。
 
 #@ONLY：限制变量替换，让其只替换被 @VAR@ 引用的变量（那么 ${VAR} 格式的变量将不会被替换）。这在配置 ${VAR} 语法的脚本时是非常 有用的。 
-#NEWLINE_STYLE <style>：指定输出文件中的新行格式。
+#NEWLINE_STYLE <styles>：指定输出文件中的新行格式。
 #UNIX 和 LF 的新 行是 \n ，DOS 和 WIN32 和 CRLF 的新行格式是 \r\n 。 这个选项在指定了 COPYONLY 选项时不能使用（无效）。
 
 #读写文件
