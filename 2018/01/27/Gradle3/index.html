@@ -119,19 +119,30 @@
 	console.log(audio);
 	var isPlay = false;
 	var music = document.getElementById('music');
+	var mListener = function(){
+		if(!isPlay){
+			music.click();
+		}
+	}
+
+	document.addEventListener("mousemove",mListener);
+	document.addEventListener("click",mListener);
+	document.addEventListener("scroll",mListener);
+
 	function playAndPause(){
 		if(isPlay){
 			music.className = "icon fa-play";
 			audio.pause();
 		}else{
-			
 			var playPromise = audio.play();
-
 			if (playPromise !== undefined) {
 				playPromise.then(_ => {
 				// Automatic playback started!
 				// Show playing UI.
 				music.className = "icon fa-pause";
+				document.removeEventListener("mousemove",mListener);
+				document.removeEventListener("click",mListener);
+				document.removeEventListener("scroll",mListener);
 				})
 				.catch(error => {
 				// Auto-play was prevented
@@ -144,16 +155,6 @@
 		}
 		isPlay = !isPlay;
 	}
-
-	var mouseMoveListener = function(){
-		if(!isPlay){
-			music.click();
-			document.removeEventListener("mousemove",mouseMoveListener);
-		}
-	}
-
-	document.addEventListener("mousemove",mouseMoveListener);
-
 </script>
 
 
