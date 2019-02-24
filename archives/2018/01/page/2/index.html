@@ -119,8 +119,8 @@
 	var audio = new Audio(["/medias/cxy.mp3"]);
 	console.log(audio);
 	var isPlay = false;
+	var music = document.getElementById('music');
 	function playAndPause(){
-		var music = document.getElementById('music');
 		if(isPlay){
 			music.className = "icon fa-play";
 			audio.pause();
@@ -146,9 +146,14 @@
 		isPlay = !isPlay;
 	}
 
-	$(document).ready(function(){
-		playAndPause();
-   })
+	var mouseMoveListener = function(){
+		if(!isPlay){
+			music.click();
+			document.removeEventListener("mousemove",mouseMoveListener);
+		}
+	}
+
+	document.addEventListener("mousemove",mouseMoveListener);
 
 </script>
 
