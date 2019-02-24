@@ -105,11 +105,49 @@
 		                <li><a href="https://github.com/yzytmac" class="icon fa-github-alt"><span class="label">GitHub</span></a></li>
 					
 					
-		                <li><a href="mailto:yzytmac@163.com#" class="icon fa-envelope"><span class="label">Email</span></a></li>
+		                <li><a href="mailto:yzytmac@163.com" class="icon fa-envelope"><span class="label">Email</span></a></li>
+					
+					
+		                <li><a href="javascript:;" class="icon fa-play" id="music" onclick="playAndPause()"><span class="label">Music</span></a></li>
 		            
 			</ul>
 </nav>
 
+<script type="text/javascript">
+	// var audio = document.getElementById('audio');
+	var audio = new Audio(["/medias/cxy.mp3"]);
+	console.log(audio);
+	var isPlay = false;
+	function playAndPause(){
+		var music = document.getElementById('music');
+		if(isPlay){
+			music.className = "icon fa-play";
+			audio.pause();
+		}else{
+			
+			var playPromise = audio.play();
+
+			if (playPromise !== undefined) {
+				playPromise.then(_ => {
+				// Automatic playback started!
+				// Show playing UI.
+				music.className = "icon fa-pause";
+				})
+				.catch(error => {
+				// Auto-play was prevented
+				// Show paused UI.
+				console.log("error--->"+error);
+				music.className = "icon fa-play";
+				});
+			}
+		}
+		isPlay = !isPlay;
+	}
+
+	$(document).ready(function(){
+		playAndPause();
+   })
+</script>
 
 
         <div id="main" >
