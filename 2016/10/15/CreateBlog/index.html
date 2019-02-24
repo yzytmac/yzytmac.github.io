@@ -135,7 +135,7 @@ sudo apt-get install npm
 </ul>
 <p>2、关联git和github<br>第一次使用git向github提交，需要先配置用户信息，执行命令 </p>
 <pre><code>git config --global user.name &quot;你的github名字&quot;
-git config --global usr.email &quot;你的github绑定邮箱&quot;
+git config --global user.email &quot;你的github绑定邮箱&quot;
 </code></pre><p>3、创建ssh  </p>
 <pre><code>ssh-keygen -t rsa -C 你的邮箱
 </code></pre><p>然后会让你指定生成id_rsa存放的位置，随你选，就选择它提示的位置就行  </p>
@@ -207,7 +207,8 @@ hexo d -g
         admin: ['yzytmac'],
         id: location.pathname,
         // id: decodeId,
-        distractionFreeMode: 'true'
+        distractionFreeMode: 'true',
+        createIssueManually: 'true'
         })
     gitalk.render('gitalk-container')           
 </script>
