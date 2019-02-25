@@ -109,10 +109,29 @@
 		                <li><a href="mailto:yzytmac@163.com" class="icon fa-envelope"><span class="label">Email</span></a></li>
 					
 					
-		                <li><a href="javascript:;" class="icon fa-play" id="music" onclick="playAndPause()"><span class="label">Music</span></a></li>
+		                <li><a href="javascript:;" class="icon fa-music music_rote" id="music" onclick="playAndPause()"><span class="label">Music</span></a></li>
 		            
 			</ul>
 </nav>
+
+<style> 
+        .music_rote{
+			display: inline-block;
+            -webkit-animation:myRotate 10s linear infinite;
+            animation:myRotate 10s linear infinite;
+        }
+        @-webkit-keyframes myRotate{
+            0%{ -webkit-transform: rotate(0deg);}
+            50%{ -webkit-transform: rotate(180deg);}
+            100%{ -webkit-transform: rotate(360deg);}
+        }
+        @keyframes myRotate{
+            0%{ -webkit-transform: rotate(0deg);}
+            50%{ -webkit-transform: rotate(180deg);}
+            100%{ -webkit-transform: rotate(360deg);}
+        }
+    
+</style>
 
 <script type="text/javascript">
 	// var audio = document.getElementById('audio');
@@ -132,7 +151,7 @@
 
 	function playAndPause(){
 		if(isPlay){
-			music.className = "icon fa-play";
+			music.className = "icon fa-music";
 			audio.pause();
 		}else{
 			var playPromise = audio.play();
@@ -140,7 +159,7 @@
 				playPromise.then(_ => {
 				// Automatic playback started!
 				// Show playing UI.
-				music.className = "icon fa-pause";
+				music.className = "icon fa-music music_rote";
 				document.removeEventListener("mousemove",mListener);
 				document.removeEventListener("click",mListener);
 				document.removeEventListener("scroll",mListener);
@@ -149,7 +168,7 @@
 				// Auto-play was prevented
 				// Show paused UI.
 				console.log("error--->"+error);
-				music.className = "icon fa-play";
+				music.className = "icon fa-music";
 				isPlay=false;
 				});
 			}
@@ -170,32 +189,6 @@
                  
                 <div class="6u 12u(narrower)">
                     <section class="link_box special">
-                        <div class="page_title" style="background-image: url(https://timgsa.baidu.com/timg?image&amp;quality=80&amp;size=b9999_10000&amp;sec=1517214609323&amp;di=40d0cb3d0cacdcc718de20dccb81fa6d&amp;imgtype=0&amp;src=http%3A%2F%2Fimgup01.sj88.com%2F2017-06%2F30%2F01%2F1498755765289_0.jpg);background-position: center; background-repeat:no-repeat; background-size:cover;-moz-background-size:cover;">
-                            <!--标题-->
-                            <a href="/2018/01/28/Kotlin10/"><h2 class="page_title_text"> Kotlin教程10---集合和函数操作符 </h2></a>
-                            <!--段落-->
-                        </div>
-                        <div class="home-post-info">
-                            <!-- Author Avatar -->
-                            <div class="home-post-info-author-avatar">
-                                <h6><span class="home-post-info-data">2018-01-28</span></h6>
-                                <div class="home-post-info-Category">
-                                    <!-- Category -->
-                                    <span>
-                            <h6>
-                            <a class="post_category-link" href="http://localhost:4000/categories/Algorithm/"><a class="post_category-link" href="/categories/Kotlin教程/">Kotlin教程</a></a>                              
-                            </h6>
-
-                        </span>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
-                </div>
-                <!-- 文章sample  e-->
-             
-                <div class="6u 12u(narrower)">
-                    <section class="link_box special">
                         <div class="page_title" style="background-image: url(https://timgsa.baidu.com/timg?image&amp;quality=80&amp;size=b9999_10000&amp;sec=1517576446704&amp;di=fec11781d6709c0abfdc441d3d8f06bb&amp;imgtype=0&amp;src=http%3A%2F%2F5b0988e595225.cdn.sohucs.com%2Fimages%2F20170731%2F10bfc5ca926b46c4ab04734be177ebc6.jpeg);background-position: center; background-repeat:no-repeat; background-size:cover;-moz-background-size:cover;">
                             <!--标题-->
                             <a href="/2018/01/28/Java1/"><h2 class="page_title_text"> Java教程1---Java8特性1 </h2></a>
@@ -210,6 +203,32 @@
                                     <span>
                             <h6>
                             <a class="post_category-link" href="http://localhost:4000/categories/Algorithm/"><a class="post_category-link" href="/categories/Java教程/">Java教程</a></a>                              
+                            </h6>
+
+                        </span>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+                <!-- 文章sample  e-->
+             
+                <div class="6u 12u(narrower)">
+                    <section class="link_box special">
+                        <div class="page_title" style="background-image: url(https://timgsa.baidu.com/timg?image&amp;quality=80&amp;size=b9999_10000&amp;sec=1517214609323&amp;di=40d0cb3d0cacdcc718de20dccb81fa6d&amp;imgtype=0&amp;src=http%3A%2F%2Fimgup01.sj88.com%2F2017-06%2F30%2F01%2F1498755765289_0.jpg);background-position: center; background-repeat:no-repeat; background-size:cover;-moz-background-size:cover;">
+                            <!--标题-->
+                            <a href="/2018/01/28/Kotlin10/"><h2 class="page_title_text"> Kotlin教程10---集合和函数操作符 </h2></a>
+                            <!--段落-->
+                        </div>
+                        <div class="home-post-info">
+                            <!-- Author Avatar -->
+                            <div class="home-post-info-author-avatar">
+                                <h6><span class="home-post-info-data">2018-01-28</span></h6>
+                                <div class="home-post-info-Category">
+                                    <!-- Category -->
+                                    <span>
+                            <h6>
+                            <a class="post_category-link" href="http://localhost:4000/categories/Algorithm/"><a class="post_category-link" href="/categories/Kotlin教程/">Kotlin教程</a></a>                              
                             </h6>
 
                         </span>

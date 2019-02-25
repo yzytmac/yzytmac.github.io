@@ -108,10 +108,29 @@
 		                <li><a href="mailto:yzytmac@163.com" class="icon fa-envelope"><span class="label">Email</span></a></li>
 					
 					
-		                <li><a href="javascript:;" class="icon fa-play" id="music" onclick="playAndPause()"><span class="label">Music</span></a></li>
+		                <li><a href="javascript:;" class="icon fa-music music_rote" id="music" onclick="playAndPause()"><span class="label">Music</span></a></li>
 		            
 			</ul>
 </nav>
+
+<style> 
+        .music_rote{
+			display: inline-block;
+            -webkit-animation:myRotate 10s linear infinite;
+            animation:myRotate 10s linear infinite;
+        }
+        @-webkit-keyframes myRotate{
+            0%{ -webkit-transform: rotate(0deg);}
+            50%{ -webkit-transform: rotate(180deg);}
+            100%{ -webkit-transform: rotate(360deg);}
+        }
+        @keyframes myRotate{
+            0%{ -webkit-transform: rotate(0deg);}
+            50%{ -webkit-transform: rotate(180deg);}
+            100%{ -webkit-transform: rotate(360deg);}
+        }
+    
+</style>
 
 <script type="text/javascript">
 	// var audio = document.getElementById('audio');
@@ -131,7 +150,7 @@
 
 	function playAndPause(){
 		if(isPlay){
-			music.className = "icon fa-play";
+			music.className = "icon fa-music";
 			audio.pause();
 		}else{
 			var playPromise = audio.play();
@@ -139,7 +158,7 @@
 				playPromise.then(_ => {
 				// Automatic playback started!
 				// Show playing UI.
-				music.className = "icon fa-pause";
+				music.className = "icon fa-music music_rote";
 				document.removeEventListener("mousemove",mListener);
 				document.removeEventListener("click",mListener);
 				document.removeEventListener("scroll",mListener);
@@ -148,7 +167,7 @@
 				// Auto-play was prevented
 				// Show paused UI.
 				console.log("error--->"+error);
-				music.className = "icon fa-play";
+				music.className = "icon fa-music";
 				isPlay=false;
 				});
 			}
