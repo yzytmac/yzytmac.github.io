@@ -178,41 +178,41 @@
 
 
         <div id="main" >
-            <div class ="post_page_title_img" style="height: 25rem;background-image: url(https://timgsa.baidu.com/timg?image&amp;quality=80&amp;size=b9999_10000&amp;sec=1517214609323&amp;di=40d0cb3d0cacdcc718de20dccb81fa6d&amp;imgtype=0&amp;src=http%3A%2F%2Fimgup01.sj88.com%2F2017-06%2F30%2F01%2F1498755765289_0.jpg);background-position: center; background-repeat:no-repeat; background-size:cover;-moz-background-size:cover;overflow:hidden;" >
-                <a href="#" style="padding: 4rem 4rem 2rem 4rem ;"><h2 >Kotlin教程3---空安全</h2></a>
+            <div class ="post_page_title_img" style="height: 25rem;background-image: url(https://gitee.com/yzytmac/resource/raw/master/git.png);background-position: center; background-repeat:no-repeat; background-size:cover;-moz-background-size:cover;overflow:hidden;" >
+                <a href="#" style="padding: 4rem 4rem 2rem 4rem ;"><h2 >git-svn总结</h2></a>
             </div>
             <!-- Post -->
             <div class="typo" style="padding: 3rem;">
-                <p>1、在kotlin中是不允许直接为空的，如：</p>
-<pre class="line-numbers language-kotlin"><code class="language-kotlin"><span class="token keyword">var</span> a<span class="token operator">:</span>String <span class="token operator">=</span> <span class="token keyword">null</span>
+                <h2 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h2><p>个人喜欢用git,但工作中主要还是svn,如何使用git来控制svn的项目呢,有请主角git-svn登场</p>
+<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><p>在Linux中需要安装git, svn, git-svn</p>
+<pre class="line-numbers language-shell"><code class="language-shell">sudo apt install git subversion git-svn
 <span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p>2、但是有些变量确实会存在空，那就要特殊标记允许为空<br>如果a真的可能为空那就再声明的时候用问号？标记如：</p>
-<pre class="line-numbers language-kotlin"><code class="language-kotlin"><span class="token keyword">var</span> a<span class="token operator">:</span>String？ <span class="token operator">=</span> <span class="token keyword">null</span>    ？的意思就是可为空
+<p>在mac中只需安装git和svn,因为git中已经包含了git-svn</p>
+<pre class="line-numbers language-shell"><code class="language-shell">brew install git subversion
 <span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p>3、安全的调用<br>那如果调用a.length方法就可能空指针。编译器会在编译阶段就报错，我们就要做非空检测</p>
-<pre class="line-numbers language-kotlin"><code class="language-kotlin"><span class="token keyword">if</span><span class="token punctuation">(</span>a<span class="token operator">!=</span><span class="token keyword">null</span><span class="token punctuation">)</span> a<span class="token punctuation">.</span>length
-<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p>这种事显式的检测。那么隐式的就是安全的调用 ?.<br>如：</p>
-<pre class="line-numbers language-kotlin"><code class="language-kotlin">a<span class="token operator">?</span><span class="token punctuation">.</span>length
-<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p> 意思就是如果a非空就直接调length，a为空就直接返回null</p>
-<p>4、Elvis 操作符  ?:<br>类似于java中的三元运算符</p>
-<pre class="line-numbers language-kotlin"><code class="language-kotlin">a<span class="token operator">?</span><span class="token punctuation">.</span><span class="token function">func</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">?:</span> <span class="token function">print</span><span class="token punctuation">(</span> <span class="token string">"左边空啦"</span><span class="token punctuation">)</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p>意思就是如果?:左边出现空指针，那么就执行右边的表达式。</p>
-<p>5、!! 操作符<br>如果我就非得遇到空指针，强行用null来调用方法，那么就用双感叹号!!标记</p>
-<pre class="line-numbers language-kotlin"><code class="language-kotlin">a<span class="token operator">!!</span><span class="token punctuation">.</span>length
-<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p>6、安全的类型转换</p>
-<pre class="line-numbers language-kotlin"><code class="language-kotlin"><span class="token keyword">val</span> b <span class="token operator">=</span> a <span class="token keyword">as</span> String  <span class="token comment" spellcheck="true">//把a进行类型转换，但有可能a不是String的子类对象，那么就会报类型转换异常</span>
-<span class="token keyword">val</span> b：String ？ <span class="token operator">=</span> a <span class="token keyword">as</span><span class="token operator">?</span> String  <span class="token comment" spellcheck="true">//这样如果转换失败就返回null</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-<p>7、等号操作符</p>
-<pre class="line-numbers language-kotlin"><code class="language-kotlin"><span class="token operator">=</span> <span class="token comment" spellcheck="true">//赋值</span>
-<span class="token operator">==</span><span class="token comment" spellcheck="true">//判断值是否相等</span>
-<span class="token operator">===</span><span class="token comment" spellcheck="true">//判断内存地址是否相等</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
-<p>不仅可判断整形，字符串，对象都可以判断。这点和java很大不同。</p>
+<h2 id="命令"><a href="#命令" class="headerlink" title="命令"></a>命令</h2><pre class="line-numbers language-shell"><code class="language-shell"># 拉取一个项目
+git svn clone xxx [--username=xxx]
+
+# 更新svn仓库的代码
+git svn rebase
+
+# 本地的一些操作增删改查,都是在git下完成
+git log [--author=xxx] #查看(某人的)日志,用git svn log -v查看的更详细
+git status #查看状态
+git add * #添加所有修改
+git commit -m "xx" #提交到git本地仓库
+git reset --hard HEAD #恢复所有修改到本地最新版本
+git reset HEAD file #丢弃暂存区的修改
+git revert HEAD #取消上一次的提交
+git branch new_branch_name #创建新分支
+git checkout -b new_branch_name #创建并跳转到新分支
+git branch -d branch_name #删除分支
+git diff #显示工作去与暂存区的修改
+
+# 提交svn仓库
+git svn dcommit
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>与svn服务器有关的操作就用git svn命令开头,仅仅在本地的操作就用git开头</p>
 
             </div>
 

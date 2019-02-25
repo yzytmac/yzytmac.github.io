@@ -29,24 +29,25 @@
 <link rel="stylesheet" href="/css/prism.css" type="text/css">
 <link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
     
-		
-<!-- Layouts -->
-
-
-
-<!--  代码渲染  -->
-<link rel="stylesheet" href="/css/prism_coy.css" />
-<link rel="stylesheet" href="/css/typo.css" />
-<!-- 文章页 -->
-<body class="is-loading">
+		<body class="is-loading">
     <!-- Wrapper 外包 s-->
-    <div id="wrapper" class="fade-in">
+    <div id="wrapper" class="fade-in overlay">
         <!-- Intro 头部显示 s -->
+                <div id="intro">
+            <h1>This is<br />
+                        yzytmac </h1>
+            <p> 技术不是生活的全部 <br/> 爱生活 · 爱编程
+            </p>
+            <ul class="actions">
+                <li><a href="#header" class="button icon solo fa-arrow-down scrolly">Continue</a></li>
+            </ul>
+        </div>
         <!-- Intro 头部显示 e -->
         <!-- Header 头部logo start -->
         <header id="header">
     <a href="/" class="logo">yzytmac</a>
 </header>
+        <!-- Header 头部logo end -->
         <!-- Nav 导航条 start -->
         <nav id="nav" class="special" >
             <ul class="menu links" >
@@ -176,83 +177,53 @@
 	}
 </script>
 
+        <!-- Nav 导航条 end -->
+        <!-- Main 主要部分 start -->
+        
+        <!-- 文章列表   s -->
+        <div id="main" style="background-color: transparent; padding:0;">
+        <section class="link_container" style="margin-top: 0; background-color: transparent; ">
+            <div class="link_row">
+                <!-- 文章sample  s-->
 
-        <div id="main" >
-            <div class ="post_page_title_img" style="height: 25rem;background-image: url(https://timgsa.baidu.com/timg?image&amp;quality=80&amp;size=b9999_10000&amp;sec=1517214609323&amp;di=40d0cb3d0cacdcc718de20dccb81fa6d&amp;imgtype=0&amp;src=http%3A%2F%2Fimgup01.sj88.com%2F2017-06%2F30%2F01%2F1498755765289_0.jpg);background-position: center; background-repeat:no-repeat; background-size:cover;-moz-background-size:cover;overflow:hidden;" >
-                <a href="#" style="padding: 4rem 4rem 2rem 4rem ;"><h2 >Kotlin教程3---空安全</h2></a>
-            </div>
-            <!-- Post -->
-            <div class="typo" style="padding: 3rem;">
-                <p>1、在kotlin中是不允许直接为空的，如：</p>
-<pre class="line-numbers language-kotlin"><code class="language-kotlin"><span class="token keyword">var</span> a<span class="token operator">:</span>String <span class="token operator">=</span> <span class="token keyword">null</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p>2、但是有些变量确实会存在空，那就要特殊标记允许为空<br>如果a真的可能为空那就再声明的时候用问号？标记如：</p>
-<pre class="line-numbers language-kotlin"><code class="language-kotlin"><span class="token keyword">var</span> a<span class="token operator">:</span>String？ <span class="token operator">=</span> <span class="token keyword">null</span>    ？的意思就是可为空
-<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p>3、安全的调用<br>那如果调用a.length方法就可能空指针。编译器会在编译阶段就报错，我们就要做非空检测</p>
-<pre class="line-numbers language-kotlin"><code class="language-kotlin"><span class="token keyword">if</span><span class="token punctuation">(</span>a<span class="token operator">!=</span><span class="token keyword">null</span><span class="token punctuation">)</span> a<span class="token punctuation">.</span>length
-<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p>这种事显式的检测。那么隐式的就是安全的调用 ?.<br>如：</p>
-<pre class="line-numbers language-kotlin"><code class="language-kotlin">a<span class="token operator">?</span><span class="token punctuation">.</span>length
-<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p> 意思就是如果a非空就直接调length，a为空就直接返回null</p>
-<p>4、Elvis 操作符  ?:<br>类似于java中的三元运算符</p>
-<pre class="line-numbers language-kotlin"><code class="language-kotlin">a<span class="token operator">?</span><span class="token punctuation">.</span><span class="token function">func</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">?:</span> <span class="token function">print</span><span class="token punctuation">(</span> <span class="token string">"左边空啦"</span><span class="token punctuation">)</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p>意思就是如果?:左边出现空指针，那么就执行右边的表达式。</p>
-<p>5、!! 操作符<br>如果我就非得遇到空指针，强行用null来调用方法，那么就用双感叹号!!标记</p>
-<pre class="line-numbers language-kotlin"><code class="language-kotlin">a<span class="token operator">!!</span><span class="token punctuation">.</span>length
-<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p>6、安全的类型转换</p>
-<pre class="line-numbers language-kotlin"><code class="language-kotlin"><span class="token keyword">val</span> b <span class="token operator">=</span> a <span class="token keyword">as</span> String  <span class="token comment" spellcheck="true">//把a进行类型转换，但有可能a不是String的子类对象，那么就会报类型转换异常</span>
-<span class="token keyword">val</span> b：String ？ <span class="token operator">=</span> a <span class="token keyword">as</span><span class="token operator">?</span> String  <span class="token comment" spellcheck="true">//这样如果转换失败就返回null</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-<p>7、等号操作符</p>
-<pre class="line-numbers language-kotlin"><code class="language-kotlin"><span class="token operator">=</span> <span class="token comment" spellcheck="true">//赋值</span>
-<span class="token operator">==</span><span class="token comment" spellcheck="true">//判断值是否相等</span>
-<span class="token operator">===</span><span class="token comment" spellcheck="true">//判断内存地址是否相等</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
-<p>不仅可判断整形，字符串，对象都可以判断。这点和java很大不同。</p>
+                 
+                <div class="6u 12u(narrower)">
+                    <section class="link_box special">
+                        <div class="page_title" style="background-image: url(https://gitee.com/yzytmac/resource/raw/master/git.png);background-position: center; background-repeat:no-repeat; background-size:cover;-moz-background-size:cover;">
+                            <!--标题-->
+                            <a href="/2019/02/25/gitsvn/"><h2 class="page_title_text"> git-svn总结 </h2></a>
+                            <!--段落-->
+                        </div>
+                        <div class="home-post-info">
+                            <!-- Author Avatar -->
+                            <div class="home-post-info-author-avatar">
+                                <h6><span class="home-post-info-data">2019-02-25</span></h6>
+                                <div class="home-post-info-Category">
+                                    <!-- Category -->
+                                    <span>
+                            <h6>
+                            <a class="post_category-link" href="http://localhost:4000/categories/Algorithm/"><a class="post_category-link" href="/categories/git-svn教程/">git-svn教程</a></a>                              
+                            </h6>
 
-            </div>
-
-            <!-- Post Comments -->
+                        </span>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+                <!-- 文章sample  e-->
             
-    <!-- 使用 gitalk -->
-<div id="gitalk-comment">
-    <div id="gitalk-container"></div>
-<link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
-<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/blueimp-md5/2.10.0/js/md5.min.js"></script>
-<script type="text/javascript">
-    var hashId = md5(location.pathname);
-    var decodeId = decodeURIComponent(location.pathname);
-    console.log("----yzyName----->"+location.pathname);
-    console.log("----yzy解码----->"+decodeId);
-    console.log("----yzymd5----->"+hashId);
-    var gitalk = new Gitalk({
-        clientID: 'f1b19f7e6b00bb0ad80d',
-        clientSecret: 'a16c25ed4ad42fdddae11dfec79e7d7e28cc3864',
-        repo: 'yzytmac.github.io',
-        owner: 'yzytmac',
-        admin: ['yzytmac'],
-        id: location.pathname,
-        // id: decodeId,
-        distractionFreeMode: 'true',
-        createIssueManually: 'true'
-        })
-    gitalk.render('gitalk-container')           
-</script>
-</div>
-<style>
-    #gitalk-comment{
-        background-color: #eee;
-        padding: 2pc;
-    }
-</style>
-
-
+            </div>
+        </section>
         </div>
+        <!-- 文章列表   end -->
+        <!-- Main 主要部分 end -->
+        <!-- footer  页码 start-->
+        <footer style="text-align: center; padding-top: 2em;">
+  
+</footer>
+
+        <!-- footer  页码 end-->
         <!-- Copyright 版权 start -->
                 <div id="copyright">
             <ul>
@@ -263,10 +234,10 @@
             	<span id="busuanzi_container_site_pv">2019总访问量<span id="busuanzi_value_site_pv"></span>次</span>
 			
         </div>
+        <!-- Copyright 版权 end -->
     </div>
+    <!-- Wrapper 外包 e-->
+    <!-- Scripts -->
 </body>
-
-
-
  	
 </html>
