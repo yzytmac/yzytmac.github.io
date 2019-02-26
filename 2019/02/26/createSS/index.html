@@ -29,25 +29,24 @@
 <link rel="stylesheet" href="/css/prism.css" type="text/css">
 <link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
     
-		<body class="is-loading">
+		
+<!-- Layouts -->
+
+
+
+<!--  代码渲染  -->
+<link rel="stylesheet" href="/css/prism_coy.css" />
+<link rel="stylesheet" href="/css/typo.css" />
+<!-- 文章页 -->
+<body class="is-loading">
     <!-- Wrapper 外包 s-->
-    <div id="wrapper" class="fade-in overlay">
+    <div id="wrapper" class="fade-in">
         <!-- Intro 头部显示 s -->
-                <div id="intro">
-            <h1>This is<br />
-                        yzytmac </h1>
-            <p> 技术不是生活的全部 <br/> 爱生活 · 爱编程
-            </p>
-            <ul class="actions">
-                <li><a href="#header" class="button icon solo fa-arrow-down scrolly">Continue</a></li>
-            </ul>
-        </div>
         <!-- Intro 头部显示 e -->
         <!-- Header 头部logo start -->
         <header id="header">
     <a href="/" class="logo">yzytmac</a>
 </header>
-        <!-- Header 头部logo end -->
         <!-- Nav 导航条 start -->
         <nav id="nav" class="special" >
             <ul class="menu links" >
@@ -177,105 +176,85 @@
 	}
 </script>
 
-        <!-- Nav 导航条 end -->
-        <!-- Main 主要部分 start -->
-        
-        <!-- 文章列表   s -->
-        <div id="main" style="background-color: transparent; padding:0;">
-        <section class="link_container" style="margin-top: 0; background-color: transparent; ">
-            <div class="link_row">
-                <!-- 文章sample  s-->
 
-                 
-                <div class="6u 12u(narrower)">
-                    <section class="link_box special">
-                        <div class="page_title" style="background-image: url(https://i1.wp.com/thatinterpreter.net/wp-content/uploads/2017/08/Shadowsocks.jpg?ssl=1);background-position: center; background-repeat:no-repeat; background-size:cover;-moz-background-size:cover;">
-                            <!--标题-->
-                            <a href="/2019/02/26/createSS/"><h2 class="page_title_text"> 搭建SS/SSR教程 </h2></a>
-                            <!--段落-->
-                        </div>
-                        <div class="home-post-info">
-                            <!-- Author Avatar -->
-                            <div class="home-post-info-author-avatar">
-                                <h6><span class="home-post-info-data">2019-02-26</span></h6>
-                                <div class="home-post-info-Category">
-                                    <!-- Category -->
-                                    <span>
-                            <h6>
-                            <a class="post_category-link" href="http://localhost:4000/categories/Algorithm/"><a class="post_category-link" href="/categories/电脑技术/">电脑技术</a></a>                              
-                            </h6>
-
-                        </span>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
-                </div>
-                <!-- 文章sample  e-->
-             
-                <div class="6u 12u(narrower)">
-                    <section class="link_box special">
-                        <div class="page_title" style="background-image: url(https://gitee.com/yzytmac/resource/raw/master/git.png);background-position: center; background-repeat:no-repeat; background-size:cover;-moz-background-size:cover;">
-                            <!--标题-->
-                            <a href="/2019/02/25/gitsvn/"><h2 class="page_title_text"> git-svn总结 </h2></a>
-                            <!--段落-->
-                        </div>
-                        <div class="home-post-info">
-                            <!-- Author Avatar -->
-                            <div class="home-post-info-author-avatar">
-                                <h6><span class="home-post-info-data">2019-02-25</span></h6>
-                                <div class="home-post-info-Category">
-                                    <!-- Category -->
-                                    <span>
-                            <h6>
-                            <a class="post_category-link" href="http://localhost:4000/categories/Algorithm/"><a class="post_category-link" href="/categories/git-svn教程/">git-svn教程</a></a>                              
-                            </h6>
-
-                        </span>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
-                </div>
-                <!-- 文章sample  e-->
-             
-                <div class="6u 12u(narrower)">
-                    <section class="link_box special">
-                        <div class="page_title" style="background-image: url(https://gitee.com/yzytmac/resource/raw/master/cmake.jpg);background-position: center; background-repeat:no-repeat; background-size:cover;-moz-background-size:cover;">
-                            <!--标题-->
-                            <a href="/2019/02/22/CmakeOk/"><h2 class="page_title_text"> CMAKE总结 </h2></a>
-                            <!--段落-->
-                        </div>
-                        <div class="home-post-info">
-                            <!-- Author Avatar -->
-                            <div class="home-post-info-author-avatar">
-                                <h6><span class="home-post-info-data">2019-02-22</span></h6>
-                                <div class="home-post-info-Category">
-                                    <!-- Category -->
-                                    <span>
-                            <h6>
-                            <a class="post_category-link" href="http://localhost:4000/categories/Algorithm/"><a class="post_category-link" href="/categories/CMAKE教程/">CMAKE教程</a></a>                              
-                            </h6>
-
-                        </span>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
-                </div>
-                <!-- 文章sample  e-->
-            
+        <div id="main" >
+            <div class ="post_page_title_img" style="height: 25rem;background-image: url(https://i1.wp.com/thatinterpreter.net/wp-content/uploads/2017/08/Shadowsocks.jpg?ssl=1);background-position: center; background-repeat:no-repeat; background-size:cover;-moz-background-size:cover;overflow:hidden;" >
+                <a href="#" style="padding: 4rem 4rem 2rem 4rem ;"><h2 >搭建SS/SSR教程</h2></a>
             </div>
-        </section>
-        </div>
-        <!-- 文章列表   end -->
-        <!-- Main 主要部分 end -->
-        <!-- footer  页码 start-->
-        <footer style="text-align: center; padding-top: 2em;">
-  
-</footer>
+            <!-- Post -->
+            <div class="typo" style="padding: 3rem;">
+                <h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><p>由于国内网络环境特殊,导致国外很多优秀软件和网站无法使用,比如Google,YouTube,Dropbox等等,程序猿使用Google又是必备的,所以就需要借助梯子,但买别人的梯子一是速度慢,二是不安全(数据走别人服务器不安全,容易被请喝茶),所以就需要我们自己动手搭建自己的梯子了.这里只做学习交流,不要做违法乱纪的事,出事了与我无关.</p>
+<h2 id="准备"><a href="#准备" class="headerlink" title="准备"></a>准备</h2><p>只需准备一个境外的vps服务器,综合价格,速度,方便,安全等诸多因素,我选择的是vutrl的<a href="https://www.vultr.com/?ref=7474996" title="点我跳转" target="_blank" rel="noopener">点我跳转去vutrl</a>,从我这个链接进去新用户首充送10美金,支持支付宝,然后购买最3美金或5美金一个月的服务器,系统选centos就行了,地区选亚洲的国家最好,然后就进入搭建环节.</p>
+<h2 id="搭建"><a href="#搭建" class="headerlink" title="搭建"></a>搭建</h2><ol>
+<li>ssh到你的服务器  <pre class="line-numbers language-bash"><code class="language-bash"><span class="token function">ssh</span> root@你服务器ip
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+</li>
+<li>安装wget工具  <pre class="line-numbers language-bash"><code class="language-bash">yum <span class="token function">install</span> <span class="token function">wget</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+</li>
+<li>安装脚本  <pre class="line-numbers language-bash"><code class="language-bash"><span class="token function">wget</span> -N --no-check-certificate https://raw.githubusercontent.com/yzytmac/doubi/master/ssr.sh <span class="token operator">&amp;&amp;</span> <span class="token function">chmod</span> +x ssr.sh <span class="token operator">&amp;&amp;</span> <span class="token function">bash</span> ssr.sh
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+</li>
+<li><p>配置<br>当看到”请输入数字 [1-15]:”时就代表安装完成,可以开始配置了:<br>输入1回车-&gt;端口号默认2333,不修改就直接回车-&gt;设置密码后回车-&gt;加密方式直接回车-&gt;协议直接回车-&gt;是否兼容回车-&gt;混淆协议直接回车-&gt;设备限制无限直接回车-&gt;速度无限直接回车-&gt;端口无限直接回车-&gt;然后就是等待…-&gt;然后就配置完了,会打印如下信息,自己保存好</p>
+<pre><code>ShadowsocksR账号 配置信息：
 
-        <!-- footer  页码 end-->
+I  P        : xx.xx.xx.xx
+端口        : 2333
+密码        : doub.io
+加密        : aes-128-ctr
+协议        : auth_sha1_v4_compatible
+混淆        : plain
+设备数限制 : 0(无限)
+单线程限速 : 0 KB/S
+端口总限速 : 0 KB/S
+SS    链接 : ss://YWVzLTOC1jdHI6ZG91Yi50AxMTMuOTIuMzUjQ0OjIzMzM
+SS  二维码 : http://doub.pw/qr/qr.php?text=ss://YWVzLdHI6ZG91Yi5pb0AxMTMuOTIuMzUuMjQ0OjIzMzM
+SSR   链接 : ssr://MTEzLjkyLjM1LjI0NDoyMzMzOmF1dGhfc2hhZXMtMTI4LWN0cjpwbGFpbjpaRzkxWWk1cGJ3
+SSR 二维码 : http://doub.pw/qr/qr.php?text=ssr://MTEzLjjI0NDoyMzMzOmFc2hhMV92hZXMtMTWN0cjpwbGFpbjpaRzkxWWk1cGJ3
+</code></pre></li>
+</ol>
+<h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><p>接下来就可以在手机,平板,电脑,路由器上使用了.在设备上安装ss客户端或ssr客户端,然后复制上面的SS链接或SSR链接,将链接导入到客户端中,然后连接,此时你的设备就可以访问墙外的世界了.打开Google或YouTube试试,如果有问题仔细看看步骤是不是都对,如果还是不行可以在博客右上角联系我.</p>
+<h2 id="声明"><a href="#声明" class="headerlink" title="声明"></a>声明</h2><p>再次声明,此贴只为学习交流使用,不要做违法乱纪,危害国家安全的事情,如果此贴不合规,请联系我删帖!!</p>
+
+            </div>
+
+            <!-- Post Comments -->
+            
+    <!-- 使用 gitalk -->
+<div id="gitalk-comment">
+    <div id="gitalk-container"></div>
+<link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/blueimp-md5/2.10.0/js/md5.min.js"></script>
+<script type="text/javascript">
+    var hashId = md5(location.pathname);
+    var decodeId = decodeURIComponent(location.pathname);
+    console.log("----yzyName----->"+location.pathname);
+    console.log("----yzy解码----->"+decodeId);
+    console.log("----yzymd5----->"+hashId);
+    var gitalk = new Gitalk({
+        clientID: 'f1b19f7e6b00bb0ad80d',
+        clientSecret: 'a16c25ed4ad42fdddae11dfec79e7d7e28cc3864',
+        repo: 'yzytmac.github.io',
+        owner: 'yzytmac',
+        admin: ['yzytmac'],
+        id: location.pathname,
+        // id: decodeId,
+        distractionFreeMode: 'true',
+        createIssueManually: 'true'
+        })
+    gitalk.render('gitalk-container')           
+</script>
+</div>
+<style>
+    #gitalk-comment{
+        background-color: #eee;
+        padding: 2pc;
+    }
+</style>
+
+
+        </div>
         <!-- Copyright 版权 start -->
                 <div id="copyright">
             <ul>
@@ -286,10 +265,10 @@
             	<span id="busuanzi_container_site_pv">2019总访问量<span id="busuanzi_value_site_pv"></span>次</span>
 			
         </div>
-        <!-- Copyright 版权 end -->
     </div>
-    <!-- Wrapper 外包 e-->
-    <!-- Scripts -->
 </body>
+
+
+
  	
 </html>
