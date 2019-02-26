@@ -1,0 +1,243 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<link rel="bookmark"  type="image/x-icon"  href="/img/logo_miccall.png"/>
+	 <link rel="shortcut icon" href="/img/logo_miccall.png">
+	
+			
+    <title>
+    Yzytmac
+    </title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="/css/mic_main.css" />
+    <link rel="stylesheet" href="/css/dropdownMenu.css" />
+    
+    	<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+	
+    <noscript>
+        <link rel="stylesheet" href="/css/noscript.css" />
+    </noscript>
+			    <script src="/js/jquery.min.js"></script>
+    <script src="/js/jquery.scrollex.min.js"></script>
+    <script src="/js/jquery.scrolly.min.js"></script>
+    <script src="/js/skel.min.js"></script>
+    <script src="/js/util.js"></script>
+    <script src="/js/main.js"></script>
+	
+<link rel="stylesheet" href="/css/prism.css" type="text/css">
+<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
+    
+		<body class="is-loading">
+    <!-- Wrapper 外包 s-->
+    <div id="wrapper" class="fade-in overlay">
+        <!-- Intro 头部显示 s -->
+                <div id="intro">
+            <h1>This is<br />
+                        yzytmac </h1>
+            <p> 技术不是生活的全部 <br/> 爱生活 · 爱编程
+            </p>
+            <ul class="actions">
+                <li><a href="#header" class="button icon solo fa-arrow-down scrolly">Continue</a></li>
+            </ul>
+        </div>
+        <!-- Intro 头部显示 e -->
+        <!-- Header 头部logo start -->
+        <header id="header">
+    <a href="/" class="logo">yzytmac</a>
+</header>
+        <!-- Header 头部logo end -->
+        <!-- Nav 导航条 start -->
+        <nav id="nav" class="special" >
+            <ul class="menu links" >
+			<!-- Homepage  主页  --> 
+			<li >
+	            <a href="/" rel="nofollow">主页</a>
+	        </li>
+			<!-- categories_name  分类   --> 
+	        
+	        <li class="active">
+	            <a href="#s1">分类</a>
+	                    <ul class="submenu">
+	                        <li>
+	                        <a class="category-link" href="/categories/CMAKE教程/">CMAKE教程</a></li><li><a class="category-link" href="/categories/Gradle教程/">Gradle教程</a></li><li><a class="category-link" href="/categories/Java教程/">Java教程</a></li><li><a class="category-link" href="/categories/Kotlin教程/">Kotlin教程</a></li><li><a class="category-link" href="/categories/git-svn教程/">git-svn教程</a></li><li><a class="category-link" href="/categories/生活/">生活</a></li><li><a class="category-link" href="/categories/电脑技术/">电脑技术</a>
+	                    </ul>
+	        </li>
+	        
+	        <!-- archives  归档   --> 
+	        
+	        <li class="active">
+	            <a href="#s1">归档</a>
+	                    <ul class="submenu">
+	                        <li>
+	                        <a class="archive-link" href="/archives/2019/02/">February 2019</a></li><li><a class="archive-link" href="/archives/2018/01/">January 2018</a></li><li><a class="archive-link" href="/archives/2016/11/">November 2016</a></li><li><a class="archive-link" href="/archives/2016/10/">October 2016</a>
+	                    </ul>
+	        </li>
+	        
+	        
+		        <!-- Pages 自定义   -->
+		        
+		        <li>
+		            <a href="/about/" title="我">
+		                我
+		            </a>
+		        </li>
+		        
+		        <li>
+		            <a href="http://www.jimicloud.com/" title="公司">
+		                公司
+		            </a>
+		        </li>
+		        
+
+
+            </ul>
+			<!-- icons 图标   -->
+			<img src="https://gitee.com/yzytmac/resource/raw/master/yzyweixin.png" style="width:85px;height:85px;display:none" id="qr"/>
+			<ul class="icons">
+					
+		                <li><a href="javascript:;" class="icon fa-wechat" onclick="new Function( $('#qr').toggle());"><span class="label">Wechat</span></a></li>
+					
+					
+		                <li><a href="tencent://message/?Menu=yes&amp;uin=398564331&amp;Service=300&amp;sigT=45a1e5847943b64c6ff3990f8a9e644d2b31356cb0b4ac6b24663a3c8dd0f8aa12a595b1714f9d45" class="icon fa-qq"><span class="label">QQ</span></a></li>
+					
+					
+		                <li><a href="https://github.com/yzytmac" class="icon fa-github-alt"><span class="label">GitHub</span></a></li>
+					
+					
+		                <li><a href="mailto:yzytmac@163.com" class="icon fa-envelope"><span class="label">Email</span></a></li>
+					
+					
+		                <li><a href="javascript:;" class="icon fa-music music_rote" id="music" onclick="playAndPause()"><span class="label">Music</span></a></li>
+		            
+			</ul>
+</nav>
+
+<style> 
+        .music_rote{
+			display: inline-block;
+            -webkit-animation:myRotate 10s linear infinite;
+            animation:myRotate 10s linear infinite;
+        }
+        @-webkit-keyframes myRotate{
+            0%{ -webkit-transform: rotate(0deg);}
+            50%{ -webkit-transform: rotate(180deg);}
+            100%{ -webkit-transform: rotate(360deg);}
+        }
+        @keyframes myRotate{
+            0%{ -webkit-transform: rotate(0deg);}
+            50%{ -webkit-transform: rotate(180deg);}
+            100%{ -webkit-transform: rotate(360deg);}
+        }
+    
+</style>
+
+<script type="text/javascript">
+	// var audio = document.getElementById('audio');
+	var audio = new Audio(["/medias/cxy.mp3"]);
+	console.log(audio);
+	var isPlay = false;
+	var music = document.getElementById('music');
+	var mListener = function(){
+		if(!isPlay){
+			music.click();
+		}
+	}
+
+	document.addEventListener("mousemove",mListener);
+	document.addEventListener("click",mListener);
+	document.addEventListener("scroll",mListener);
+
+	function playAndPause(){
+		if(isPlay){
+			music.className = "icon fa-music";
+			audio.pause();
+		}else{
+			var playPromise = audio.play();
+			if (playPromise !== undefined) {
+				playPromise.then(_ => {
+				// Automatic playback started!
+				// Show playing UI.
+				music.className = "icon fa-music music_rote";
+				document.removeEventListener("mousemove",mListener);
+				document.removeEventListener("click",mListener);
+				document.removeEventListener("scroll",mListener);
+				})
+				.catch(error => {
+				// Auto-play was prevented
+				// Show paused UI.
+				console.log("error--->"+error);
+				music.className = "icon fa-music";
+				isPlay=false;
+				});
+			}
+		}
+		isPlay = !isPlay;
+	}
+</script>
+
+        <!-- Nav 导航条 end -->
+        <!-- Main 主要部分 start -->
+        
+        <!-- 文章列表   s -->
+        <div id="main" style="background-color: transparent; padding:0;">
+        <section class="link_container" style="margin-top: 0; background-color: transparent; ">
+            <div class="link_row">
+                <!-- 文章sample  s-->
+
+                 
+                <div class="6u 12u(narrower)">
+                    <section class="link_box special">
+                        <div class="page_title" style="background-image: url(https://i1.wp.com/thatinterpreter.net/wp-content/uploads/2017/08/Shadowsocks.jpg?ssl=1);background-position: center; background-repeat:no-repeat; background-size:cover;-moz-background-size:cover;">
+                            <!--标题-->
+                            <a href="/2019/02/26/createSS/"><h2 class="page_title_text"> 搭建SS/SSR教程 </h2></a>
+                            <!--段落-->
+                        </div>
+                        <div class="home-post-info">
+                            <!-- Author Avatar -->
+                            <div class="home-post-info-author-avatar">
+                                <h6><span class="home-post-info-data">2019-02-26</span></h6>
+                                <div class="home-post-info-Category">
+                                    <!-- Category -->
+                                    <span>
+                            <h6>
+                            <a class="post_category-link" href="http://localhost:4000/categories/Algorithm/"><a class="post_category-link" href="/categories/电脑技术/">电脑技术</a></a>                              
+                            </h6>
+
+                        </span>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+                <!-- 文章sample  e-->
+            
+            </div>
+        </section>
+        </div>
+        <!-- 文章列表   end -->
+        <!-- Main 主要部分 end -->
+        <!-- footer  页码 start-->
+        <footer style="text-align: center; padding-top: 2em;">
+  
+</footer>
+
+        <!-- footer  页码 end-->
+        <!-- Copyright 版权 start -->
+                <div id="copyright">
+            <ul>
+                <li>&copy;Powered By <a href="https://hexo.io/zh-cn/" style="border-bottom: none;">hexo</a></li>
+                <li>Design: <a href="https://yzytmac.github.io" style="border-bottom: none;">yzytmac</a></li>
+            </ul>
+            
+            	<span id="busuanzi_container_site_pv">2019总访问量<span id="busuanzi_value_site_pv"></span>次</span>
+			
+        </div>
+        <!-- Copyright 版权 end -->
+    </div>
+    <!-- Wrapper 外包 e-->
+    <!-- Scripts -->
+</body>
+ 	
+</html>
