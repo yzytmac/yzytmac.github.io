@@ -178,50 +178,12 @@
 
 
         <div id="main" >
-            <div class ="post_page_title_img" style="height: 25rem;background-image: url(https://timgsa.baidu.com/timg?image&amp;quality=80&amp;size=b9999_10000&amp;sec=1517214609323&amp;di=40d0cb3d0cacdcc718de20dccb81fa6d&amp;imgtype=0&amp;src=http%3A%2F%2Fimgup01.sj88.com%2F2017-06%2F30%2F01%2F1498755765289_0.jpg);background-position: center; background-repeat:no-repeat; background-size:cover;-moz-background-size:cover;overflow:hidden;" >
-                <a href="#" style="padding: 4rem 4rem 2rem 4rem ;"><h2 >Kotlin教程9---let、apply等区别</h2></a>
+            <div class ="post_page_title_img" style="height: 25rem;background-image: url();background-position: center; background-repeat:no-repeat; background-size:cover;-moz-background-size:cover;overflow:hidden;" >
+                <a href="#" style="padding: 4rem 4rem 2rem 4rem ;"><h2 >tags</h2></a>
             </div>
             <!-- Post -->
             <div class="typo" style="padding: 3rem;">
-                <h3 id="let、apply、with、run、also的区别"><a href="#let、apply、with、run、also的区别" class="headerlink" title="let、apply、with、run、also的区别"></a>let、apply、with、run、also的区别</h3><p>通过运行以下代码来展示他们的区别，主要在于有无返回值、this和it关键字来代替本身等等</p>
-<pre class="line-numbers language-kotlin"><code class="language-kotlin"><span class="token keyword">fun</span> <span class="token function">main</span><span class="token punctuation">(</span>args<span class="token operator">:</span> Array<span class="token operator">&lt;</span>String<span class="token operator">></span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-    <span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"------------run-------------------"</span><span class="token punctuation">)</span>
-    <span class="token comment" spellcheck="true">//public inline fun &lt;T, R> T.run(block: T.() -> R): R = block()</span>
-    <span class="token keyword">val</span> a <span class="token operator">=</span> <span class="token string">"yang"</span><span class="token punctuation">.</span><span class="token function">run</span> <span class="token punctuation">{</span>
-        <span class="token function">println</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">)</span>
-    <span class="token punctuation">}</span>
-    <span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"a:<span class="token interpolation variable">$a</span>"</span><span class="token punctuation">)</span>
-
-    <span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"------------let-------------------"</span><span class="token punctuation">)</span>
-    <span class="token comment" spellcheck="true">//public inline fun &lt;T, R> T.let(block: (T) -> R): R = block(this)</span>
-    <span class="token keyword">val</span> b <span class="token operator">=</span> <span class="token string">"yang"</span><span class="token punctuation">.</span><span class="token function">let</span> <span class="token punctuation">{</span>
-        <span class="token function">println</span><span class="token punctuation">(</span>it<span class="token punctuation">)</span>
-    <span class="token punctuation">}</span>
-    <span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"b:<span class="token interpolation variable">$b</span>"</span><span class="token punctuation">)</span>
-
-    <span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"-------------apply------------------"</span><span class="token punctuation">)</span>
-    <span class="token comment" spellcheck="true">//public inline fun &lt;T> T.apply(block: T.() -> Unit): T { block(); return this }</span>
-    <span class="token keyword">val</span> c <span class="token operator">=</span> <span class="token string">"yang"</span><span class="token punctuation">.</span><span class="token function">apply</span> <span class="token punctuation">{</span>
-        <span class="token function">println</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">)</span>
-    <span class="token punctuation">}</span>
-    <span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"c:<span class="token interpolation variable">$c</span>"</span><span class="token punctuation">)</span>
-
-    <span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"-------------also------------------"</span><span class="token punctuation">)</span>
-    <span class="token comment" spellcheck="true">//public inline fun &lt;T> T.also(block: (T) -> Unit): T { block(this); return this }</span>
-    <span class="token keyword">val</span> d <span class="token operator">=</span> <span class="token string">"yang"</span><span class="token punctuation">.</span><span class="token function">also</span> <span class="token punctuation">{</span>
-        <span class="token function">println</span><span class="token punctuation">(</span>it<span class="token punctuation">)</span>
-    <span class="token punctuation">}</span>
-    <span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"d:<span class="token interpolation variable">$d</span>"</span><span class="token punctuation">)</span>
-
-    <span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"---------------with----------------"</span><span class="token punctuation">)</span>
-    <span class="token comment" spellcheck="true">//public inline fun &lt;T, R> with(receiver: T, block: T.() -> R): R = receiver.block()</span>
-    <span class="token keyword">val</span> e <span class="token operator">=</span> <span class="token function">with</span><span class="token punctuation">(</span><span class="token string">"yang"</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
-        <span class="token function">println</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">)</span>
-    <span class="token punctuation">}</span>
-    <span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"e:<span class="token interpolation variable">$e</span>"</span><span class="token punctuation">)</span>
-<span class="token punctuation">}</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
+                
             </div>
 
             <!-- Post Comments -->
