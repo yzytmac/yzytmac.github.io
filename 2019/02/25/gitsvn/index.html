@@ -194,33 +194,39 @@
             <div class="typo" style="padding: 3rem;">
                 <h2 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h2><p>个人喜欢用git,但工作中主要还是svn,如何使用git来控制svn的项目呢,有请主角git-svn登场</p>
 <h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><p>在Linux中需要安装git, svn, git-svn</p>
-<pre class="line-numbers language-shell"><code class="language-shell">sudo apt install git subversion git-svn
+<pre class="line-numbers language-bash"><code class="language-bash"><span class="token function">sudo</span> apt <span class="token function">install</span> <span class="token function">git</span> subversion git-svn
 <span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <p>在mac中只需安装git和svn,因为git中已经包含了git-svn</p>
-<pre class="line-numbers language-shell"><code class="language-shell">brew install git subversion
+<pre class="line-numbers language-bash"><code class="language-bash">brew <span class="token function">install</span> <span class="token function">git</span> subversion
 <span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<h2 id="命令"><a href="#命令" class="headerlink" title="命令"></a>命令</h2><pre class="line-numbers language-shell"><code class="language-shell"># 拉取一个项目
-git svn clone xxx [--username=xxx]
+<h2 id="命令"><a href="#命令" class="headerlink" title="命令"></a>命令</h2><pre class="line-numbers language-bash"><code class="language-bash"><span class="token comment" spellcheck="true"># 拉取一个项目</span>
+<span class="token function">git</span> svn clone xxx <span class="token punctuation">[</span>--username<span class="token operator">=</span>xxx<span class="token punctuation">]</span>
 
-# 更新svn仓库的代码
-git svn rebase
+<span class="token comment" spellcheck="true"># 更新svn仓库的代码</span>
+<span class="token function">git</span> svn rebase
 
-# 本地的一些操作增删改查,都是在git下完成
-git log [--author=xxx] #查看(某人的)日志,用git svn log -v查看的更详细
-git status #查看状态
-git add * #添加所有修改
-git commit -m "xx" #提交到git本地仓库
-git reset --hard HEAD #恢复所有修改到本地最新版本
-git reset HEAD file #丢弃暂存区的修改
-git revert HEAD #取消上一次的提交
-git branch new_branch_name #创建新分支
-git checkout -b new_branch_name #创建并跳转到新分支
-git branch -d branch_name #删除分支
-git diff #显示工作去与暂存区的修改
+<span class="token comment" spellcheck="true"># 本地的一些操作增删改查,都是在git下完成</span>
+<span class="token function">git</span> log <span class="token punctuation">[</span>--author<span class="token operator">=</span>xxx<span class="token punctuation">]</span> <span class="token comment" spellcheck="true">#查看(某人的)日志,用git svn log -v查看的更详细</span>
+<span class="token function">git</span> status <span class="token comment" spellcheck="true">#查看状态</span>
+<span class="token function">git</span> add * <span class="token comment" spellcheck="true">#添加所有修改</span>
+<span class="token function">git</span> commit -m <span class="token string">"xx"</span> <span class="token comment" spellcheck="true">#提交到git本地仓库</span>
+<span class="token function">git</span> reset --hard HEAD <span class="token comment" spellcheck="true">#恢复所有修改到本地最新版本</span>
+<span class="token function">git</span> reset HEAD <span class="token function">file</span> <span class="token comment" spellcheck="true">#丢弃暂存区的修改</span>
+<span class="token function">git</span> revert HEAD <span class="token comment" spellcheck="true">#取消上一次的提交</span>
+<span class="token function">git</span> branch new_branch_name <span class="token comment" spellcheck="true">#创建新分支</span>
+<span class="token function">git</span> checkout -b new_branch_name <span class="token comment" spellcheck="true">#创建并跳转到新分支</span>
+<span class="token function">git</span> branch -d branch_name <span class="token comment" spellcheck="true">#删除分支</span>
+<span class="token function">git</span> <span class="token function">diff</span> <span class="token comment" spellcheck="true">#显示工作去与暂存区的修改</span>
 
-# 提交svn仓库
-git svn dcommit
+<span class="token comment" spellcheck="true"># 提交svn仓库</span>
+<span class="token function">git</span> svn dcommit
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h2 id="常见问题"><a href="#常见问题" class="headerlink" title="常见问题"></a>常见问题</h2><pre class="line-numbers language-bash"><code class="language-bash"><span class="token comment" spellcheck="true">#当执行git svn rebase更新代码时可能会提示下面错误 </span>
+branches/xxx/.idea/misc.xml: needs update
+update-index --refresh: <span class="token function">command</span> returned error: 1
+<span class="token comment" spellcheck="true">#说明本地与服务端冲突了,只需执行下面操作即可解决</span>
+<span class="token function">git</span> update-index --assume-unchanged xxx/.idea/misc.xml
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>与svn服务器有关的操作就用git svn命令开头,仅仅在本地的操作就用git开头</p>
 
             </div>
