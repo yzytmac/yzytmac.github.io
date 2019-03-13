@@ -225,8 +225,10 @@
 branches/xxx/.idea/misc.xml: needs update
 update-index --refresh: <span class="token function">command</span> returned error: 1
 <span class="token comment" spellcheck="true">#说明本地与服务端冲突了,只需执行下面操作即可解决</span>
+<span class="token function">git</span> update-index --refresh xxx/.idea/misc.xml
+<span class="token comment" spellcheck="true">#或者执行下面命令,意思是假设本地文件没有改变</span>
 <span class="token function">git</span> update-index --assume-unchanged xxx/.idea/misc.xml
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>与svn服务器有关的操作就用git svn命令开头,仅仅在本地的操作就用git开头</p>
 
             </div>
